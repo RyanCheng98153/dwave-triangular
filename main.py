@@ -26,7 +26,7 @@ def main(Length, Height = 1):
     
     
     solver.doExactSolver(H, J)
-    solver.printIsing(None, J)
+    solver.printIsing(H, J)
 
 
 def test(status:bool):
