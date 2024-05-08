@@ -1,14 +1,44 @@
 from dimod import BinaryQuadraticModel
+from utils import *
 import dimod
 
 class Solver:
-    def __init__(self, _L, _H, _JL, _JH) -> None:
+    def __init__(self, _L, _H) -> None:
         bqm = BinaryQuadraticModel('BINARY')
         self.length = _L
         self.height = _H
-        self.JLayer = _JL
-        self.JHeight = _JH
+        
         pass
+    
+    def fullyConnect( self, J_layer, J_height=1.0 ) -> tuple[dict, dict]:
+        H = dict()
+        J = dict()
+        
+        for i in range(0, self.length):
+            for j in range(0, self.length):
+                # x, y = toCoordinate()
+                index = toIndex(self.length, i, j)
+                H[index] = 0
+        
+        for i in range(0, self.length):
+            for j in range(0, self.length):
+                # x, y = toCoordinate()
+                index = toIndex(self.length, i, j )
+                right = getRight(self.length, index )
+                bottom = getBottom(self.length,  index)
+                bottomRight = getBottomRight(self.length, index )
+                
+                J[(index, right)] = J_layer
+                J[(index, bottom)] = J_layer
+                J[(index, bottomRight)] = J_layer
+        
+        return H, J
+    
+    def customConnect() -> tuple[dict, dict]:
+        H = dict()
+        J = dict()
+        
+        return H, J
     
     def doExactSolver(self, H, J):
         sampleset = dimod.ExactSolver().sample_ising(H, J)
@@ -20,7 +50,7 @@ class Solver:
         print("\n == Jconnected == ")
         
         if( H!=None ):
-            for i in range(0, L):
+            for i in range(0, self.length):
                 print(f"[ {i} ]: {H[i]}")
         
         Jkeys = list(J.keys())

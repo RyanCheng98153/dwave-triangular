@@ -1,36 +1,30 @@
 import sys
-import argparse
 # from argv import Args
 from graph import *
-import utils
 from solvers import Solver
+import json
 
-def main( Length:int, Height:int ):
+def getJson(file:str):
+    #with open("9_9_1_gamma0_2.json") as f:
+    with open(file) as f:
+        data = f.readlines()
+        return json.loads(data)
+
+# def main( Length:int, Height:int ):
+def main(Length, Height = 1):
     H = dict()
     J = dict()
     
-    JLayer = 1.0
-    JHeight = 1.0
+    J_layer = 1.0
+    J_height = 1.0
+    solver = Solver(Length, Height)
+    H, J = solver.fullyConnect( J_layer, J_height=1.0)
+    # H, J = solver.customConnect()
     
-    for i in range(0, L):
-        for j in range(0, L):
-            # x, y = toCoordinate()
-            index = toIndex(Length, i, j)
-            H[index] = 0
+    # jdata = getJson(sys.argv[1])
+    # solver = Solver()
     
-    for i in range(0, L):
-        for j in range(0, L):
-            # x, y = toCoordinate()
-            index = toIndex(Length, i, j )
-            right = getRight(Length, index )
-            bottom = getBottom(Length, index)
-            bottomRight = getBottomRight(Length, index )
-            
-            J[(index, right)] = 1
-            J[(index, bottom)] = 1
-            J[(index, bottomRight)] = 1
-            
-    solver = Solver(Length, Height, JLayer, JHeight)
+    
     solver.doExactSolver(H, J)
     solver.printIsing(None, J)
 
@@ -48,14 +42,21 @@ if __name__ == "__main__":
     test(False)
     
     if (len(sys.argv) == 1):
-        print("Please insert input!")
+        print("exit: Please insert input!")
         exit()
     
+    
     L = int(sys.argv[1])
-        
-    if(L % 3 == 0 and L>=3 ): 
-        # args()
-        main(L, 1)
-    else:
-        print("exit: invalid input")
-        
+    
+    
+    '''
+    if(L % 3 !=0 or L<3 ): 
+        print("exit: Invalid input")
+        exit()
+    
+    '''
+    
+    
+    
+    main(L)  
+    # main(0, 1)
