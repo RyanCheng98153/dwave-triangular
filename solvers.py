@@ -50,7 +50,7 @@ class Solver:
         print("\n == Magnetic Field == ")
         
         if( H!=None ):
-            for i in range(0, self.length * self.length):
+            for i in range(0, len(H)):
                 print(f"[{i}]: {H[i]}")
         
         print("\n == Jconnected == ")
@@ -58,15 +58,18 @@ class Solver:
         Jkeys = list(J.keys())
         key1 = None
         key2 = []
+        val = []
         
         for k in Jkeys:
             if( key1 != k[0] ):
                 if(key1 != None):
-                    print(f"[{key1}]: {key2}")
+                    print(f"[{key1}] -> {key2}: {val}")
                 
                 key1 = k[0]
                 key2 = []
+                val = []
             key2.append(k[1])
+            val.append(J[k])
         
-        print(f"[{key1}]: {key2}")
+        print(f"[{key1}] -> {key2}: {val}")
         
