@@ -1,8 +1,7 @@
 {
   "model_info": {
-    "width": 3,
-    "height": 1,
-    "depth": 3
+    "length": 3,
+    "height": 1
   },
   "nodes": [
     {"id": 0, "magnetic_field": 0.2},

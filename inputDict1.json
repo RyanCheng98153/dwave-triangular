@@ -1,39 +1,43 @@
 {
-    "nodes": [
-      {
-        "id": 0,
-        "magnetic_field": 0.2,
-        "connections": [
-          {"node_id": 1, "strength": 0.5},
-          {"node_id": 2, "strength": 0.7},
-          {"node_id": 3, "strength": 0.5}
-        ]
-      },
-      {
-        "id": 1,
-        "magnetic_field": -0.3,
-        "connections": [
-          {"node_id": 0, "strength": 0.5},
-          {"node_id": 2, "strength": 0.8}
-        ]
-      },
-      {
-        "id": 2,
-        "magnetic_field": 0.1,
-        "connections": [
-          {"node_id": 0, "strength": 0.7},
-          {"node_id": 1, "strength": 0.8},
-          {"node_id": 3, "strength": 0.6}
-        ]
-      },
-      {
-        "id": 3,
-        "magnetic_field": 0.0,
-        "connections": [
-          {"node_id": 0, "strength": 0.5},
-          {"node_id": 2, "strength": 0.6}
-        ]
-      }
-    ]
-  }
+  "model_info": {
+    "length": 3,
+    "height": 1
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "magnetic_field": 0.2,
+      "bonds": [
+        {"node_id": 1, "strength": 0.5},
+        {"node_id": 2, "strength": 0.7},
+        {"node_id": 3, "strength": 0.5}
+      ]
+    },
+    {
+      "id": 1,
+      "magnetic_field": -0.3,
+      "bonds": [
+        {"node_id": 0, "strength": 0.5},
+        {"node_id": 2, "strength": 0.8}
+      ]
+    },
+    {
+      "id": 2,
+      "magnetic_field": 0.1,
+      "bonds": [
+        {"node_id": 0, "strength": 0.7},
+        {"node_id": 1, "strength": 0.8},
+        {"node_id": 3, "strength": 0.6}
+      ]
+    },
+    {
+      "id": 3,
+      "magnetic_field": 0.0,
+      "bonds": [
+        {"node_id": 0, "strength": 0.5},
+        {"node_id": 2, "strength": 0.6}
+      ]
+    }
+  ]
+}
   
