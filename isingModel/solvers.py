@@ -54,6 +54,8 @@ class Solver:
             for k in Hkeys:
                 print(f"[{k}]: {H[k]}")
                 
+        print("\n == Jconnected == ")
+                
         Jkeys = list(J.keys())
         key1 = None
         key2 = []

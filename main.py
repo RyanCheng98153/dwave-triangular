@@ -11,22 +11,20 @@ def getJson(file:str):
         return json.loads(data)
 
 # def main( Length:int, Height:int ):
-def main(Length, Height = 1):
+def main():
     H = dict()
     J = dict()
+    
+    Length:int = int(sys.argv[1])
+    Height:int = 1
     
     J_layer = 1.0
     J_height = 1.0
     solver = Solver(Length, Height)
-    H, J = solver.fullyConnect( J_layer, J_height=1.0)
-    # H, J = solver.customConnect()
-    
-    # jdata = getJson(sys.argv[1])
-    # solver = Solver()
-    
+    H, J = solver.fullyConnect( J_layer, J_height)
     
     solver.doExactSolver(H, J)
-    solver.printIsing(None, J)
+    solver.printIsing(H, J)
 
 
 def test(status:bool):
@@ -44,19 +42,5 @@ if __name__ == "__main__":
     if (len(sys.argv) == 1):
         print("exit: Please insert input!")
         exit()
-    
-    
-    L = int(sys.argv[1])
-    
-    
-    '''
-    if(L % 3 !=0 or L<3 ): 
-        print("exit: Invalid input")
-        exit()
-    
-    '''
-    
-    
-    
-    main(L)  
-    # main(0, 1)
+        
+    main()
