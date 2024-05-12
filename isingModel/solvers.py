@@ -1,5 +1,5 @@
 from dimod import BinaryQuadraticModel
-from utils import *
+from isingModel.utils import *
 import dimod
 
 class Solver:

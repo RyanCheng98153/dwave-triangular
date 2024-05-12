@@ -1,7 +1,7 @@
 import sys
 # from argv import Args
-from graph import *
-from solvers import Solver
+from isingModel.graph import *
+from isingModel.solvers import Solver
 import json
 
 def getJson(file:str):
