@@ -47,12 +47,13 @@ class Solver:
         print(sampleset)
     
     def printIsing(self, H, J, Graph = False):
-        print("\n == Jconnected == ")
+        print("\n == Magnetic Field == ")
         
         if( H!=None ):
-            for i in range(0, self.length):
-                print(f"[ {i} ]: {H[i]}")
-        
+            Hkeys = list(H.keys())
+            for k in Hkeys:
+                print(f"[{k}]: {H[k]}")
+                
         Jkeys = list(J.keys())
         key1 = None
         key2 = []
