@@ -34,9 +34,29 @@ class Solver:
         
         return H, J
     
-    def customConnect() -> tuple[dict, dict]:
+    def spacefileConnect(file:str) -> tuple[dict, dict]:
         H = dict()
         J = dict()
+        
+        index = 1
+        for i in range ( len(file) ):
+            if("config" in file[i]):
+                index = i
+                break
+        
+        for i in range ( index, len(file) ):
+            config = file[i].split()
+            if( len(config) == 2 ):
+                node = int( config[0] )
+                magnetic_field = float( config[1] )
+                H[node] = magnetic_field
+                
+            if( len(config) == 3 ):
+                node1 = int( config[0] )
+                node2 = int( config[1] )
+                strength = float( config[2] )
+                J[(node1, node2)] = strength
+                
         
         return H, J
     
@@ -50,8 +70,10 @@ class Solver:
         print("\n == Magnetic Field == ")
         
         if( H!=None ):
-            for i in range(0, self.length*self.length):
-                print(f"[{i}]: {H[i]}")
+            Hkeys = list(H.keys())
+        
+            for k in Hkeys:
+                print(f"[{k}]: {H[k]}")
             
         print("\n == Jconnected == ")
         Jkeys = list(J.keys())
