@@ -55,19 +55,22 @@ class Solver:
                 print(f"[{k}]: {H[k]}")
                 
         print("\n == Jconnected == ")
-                
+        
         Jkeys = list(J.keys())
         key1 = None
         key2 = []
-        
+        val = []
+    
         for k in Jkeys:
             if( key1 != k[0] ):
                 if(key1 != None):
-                    print(f"[{key1}]: {key2}")
+                    print(f"[{key1}] -> {key2}: {val}")
                 
                 key1 = k[0]
                 key2 = []
+                val = []
             key2.append(k[1])
+            val.append(J[k])
         
-        print(f"[{key1}]: {key2}")
+        print(f"[{key1}] -> {key2}: {val}")
         
