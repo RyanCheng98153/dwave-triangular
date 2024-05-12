@@ -50,9 +50,10 @@ class Solver:
         print("\n == Magnetic Field == ")
         
         if( H!=None ):
-            for i in range(0, len(H)):
-                print(f"[{i}]: {H[i]}")
-        
+            Hkeys = list(H.keys())
+            for k in Hkeys:
+                print(f"[{k}]: {H[k]}")
+                
         print("\n == Jconnected == ")
         
         Jkeys = list(J.keys())
