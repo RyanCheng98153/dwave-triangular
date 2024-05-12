@@ -1,5 +1,5 @@
-from utils import getBottom, getRight, getBottomRight, toIndex
-from node import Node, Spin
+from isingModel.utils import getBottom, getRight, getBottomRight, toIndex
+from isingModel.node import Node, Spin
         
 class Graph:
     def __init__(self, 
