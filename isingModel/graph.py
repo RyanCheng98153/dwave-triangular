@@ -1,4 +1,4 @@
-from isingModel.utils import getBottom, getRight, getBottomRight, toIndex
+from isingModel.utils import *
 from isingModel.node import Node, Spin
         
 class Graph:
