@@ -30,6 +30,7 @@ Hope you have a great day :blush:
 ## requirements
 
 ## Space Separate File
+example.txt
 ```
 model_size
 3 3 1
@@ -49,5 +50,5 @@ config
 - Execution   
     ```python ./main [-L]```
     ```python ./main [-file path]``` 
-    ex: ```python ./main [-file path]```
+    ex: ```python ./main ./example.txt```
     
