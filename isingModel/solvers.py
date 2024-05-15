@@ -85,13 +85,15 @@ class Solver:
         for k in Jkeys:
             if( key1 != k[0] ):
                 if(key1 != None):
-                    print(f"[{key1}] -> {key2}: {val}")
-                
+                    # print(f"[{key1}] -> {key2}: {val}")
+                    print(f"[{key1}] -> {key2}: {[ f"{key2[i]}: {val[i]}" for i in range(0, len(key2)) ]}")
+                    
                 key1 = k[0]
                 key2 = []
                 val = []
             key2.append(k[1])
             val.append(J[k])
         
-        print(f"[{key1}] -> {key2}: {val}")
+        # print(f"[{key1}] -> {key2}: {val}")
+        print(f"[{key1}] -> {key2}: {[ str(key2[i]) + ': ' + str(val[i]) for i in range(0, len(key2)) ]}")
         
