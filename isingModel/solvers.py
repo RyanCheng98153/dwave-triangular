@@ -65,7 +65,8 @@ class Solver:
             if( key1 != k[0] ):
                 if(key1 != None):
                     print(f"[{key1}] -> {key2}: {val}")
-                
+                    # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")
+                    
                 key1 = k[0]
                 key2 = []
                 val = []
@@ -73,4 +74,4 @@ class Solver:
             val.append(J[k])
         
         print(f"[{key1}] -> {key2}: {val}")
-        
+        # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")
