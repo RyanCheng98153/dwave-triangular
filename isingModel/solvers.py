@@ -97,4 +97,6 @@ class Solver:
         
         # print(f"[{key1}] -> {key2}: {val}")
         print(f"[{key1}] -> {key2}: {[ str(key2[i]) + ': ' + str(val[i]) for i in range(0, len(key2)) ]}")
+        # print(f"[{key1}] -> {key2}: {val}")
+        print(f"[{key1}] -> {key2}: {[ str(key2[i]) + ': ' + str(val[i]) for i in range(0, len(key2)) ]}")
         
