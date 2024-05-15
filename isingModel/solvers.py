@@ -40,7 +40,7 @@ class Solver:
         
         index = 1
         for i in range ( len(file) ):
-            if("config" in file[i]):
+            if("couplings" in file[i]):
                 index = i
                 break
         
