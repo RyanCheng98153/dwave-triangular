@@ -4,6 +4,7 @@ from isingModel.graph import *
 from isingModel.solvers import Solver
 import json
 import os
+import fire
 
 def getfileData(filestr:str):
     with open(filestr) as f:
@@ -18,6 +19,34 @@ def getModelSize(file:str):
         if("model_size" in file[i]):
             model_size = file[i+1].split()
             return int(model_size[0]), int(model_size[2])
+
+class Run(object):
+    def __init__( self ):
+        pass
+        
+    def runIsing(self, 
+        length:int = 3, 
+        height:int = 1,
+        JL:int = 1.0, 
+        JH:int = 1.0 
+    ):
+        H, J = Solver.fullyConnect(length, height , JL, JH)
+        self.Length, self.Height = length, height
+        self.__runSolver(H, J)
+
+    def runSpace(self, filename:str):
+        print("Space!!")
+        H, J = dict(), dict()
+        file = getfileData( filename )
+        self.Length, self.Height = getModelSize(file)
+        H, J = Solver.spacefileConnect(file)
+        
+        self.__runSolver(H, J)
+        
+    def __runSolver(self, _H, _J):
+        solver = Solver(self.Length, self.Height)
+        solver.doExactSolver(_H, _J)
+        solver.printIsing(_H, _J)
 
 def main():
     H = dict()
@@ -61,8 +90,8 @@ def test(status:bool):
 if __name__ == "__main__":
     test(False)
     
-    if (len(sys.argv) == 1):
+    if (len(sys.argv) < 2):
         print("exit: Please insert input!")
         exit()
-        
-    main()
+    
+    fire.Fire(Run)
