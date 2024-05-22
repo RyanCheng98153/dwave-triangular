@@ -29,7 +29,24 @@ Hope you have a great day :blush:
 
 ## requirements
 
-
 ## usage
-- Execution   
-    ```python ./main -L```
+- Execution with argument: L*L ising model 
+    ```python ./main [-L]```
+- Execution with custom couplings
+    ```python ./main [-file path]``` 
+    ex: ```python ./main ./example.txt```
+
+## File Format
+- Space Separate File Format
+``` 
+model_size
+3 3 1
+couplings
+1 1.0
+0 0.5
+0 1 0.5
+0 2 0.7
+2 3 0.5
+1 2 0.8
+2 1 0.6
+```

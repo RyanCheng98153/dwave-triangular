@@ -3,29 +3,51 @@ import sys
 from isingModel.graph import *
 from isingModel.solvers import Solver
 import json
+import os
 
-def getJson(file:str):
-    #with open("9_9_1_gamma0_2.json") as f:
-    with open(file) as f:
+def getfileData(filestr:str):
+    with open(filestr) as f:
         data = f.readlines()
-        return json.loads(data)
+        return data
 
-# def main( Length:int, Height:int ):
+def getJson(filestr:str):
+    return json.loads( getfileData(filestr) )
+
+def getModelSize(file:str):
+    for i in range ( len(file) ):
+        if("model_size" in file[i]):
+            model_size = file[i+1].split()
+            return int(model_size[0]), int(model_size[2])
+
 def main():
     H = dict()
     J = dict()
     
-    Length:int = int(sys.argv[1])
-    Height:int = 1
+    inputStr = sys.argv[1]
+    
+    Length = 1
+    Height = 1
     
     J_layer = 1.0
     J_height = 1.0
-    solver = Solver(Length, Height)
-    H, J = solver.fullyConnect( J_layer, J_height)
     
+    if (inputStr.isnumeric()):
+        Length = int( inputStr )
+        print(Length)
+        H, J = Solver.fullyConnect(Length, Height ,J_layer, J_height)
+        
+    elif (os.path.exists(inputStr)):    
+        file = getfileData( inputStr )
+        Length, Height = getModelSize(file)
+        H, J = Solver.spacefileConnect(file)
+        
+    else:
+        print("exit: invalid str!")
+        exit()
+    
+    solver = Solver(Length, Height)
     solver.doExactSolver(H, J)
     solver.printIsing(H, J)
-
 
 def test(status:bool):
     # for testing

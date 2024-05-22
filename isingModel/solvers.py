@@ -10,23 +10,17 @@ class Solver:
         
         pass
     
-    def fullyConnect( self, J_layer, J_height=1.0 ) -> tuple[dict, dict]:
+    def fullyConnect( _L:int, _H:int, J_layer:float, J_height:float=1.0 ) -> tuple[dict, dict]:
         H = dict()
         J = dict()
         
-        for i in range(0, self.length):
-            for j in range(0, self.length):
+        for i in range(0, _L):
+            for j in range(0, _L):
                 # x, y = toCoordinate()
-                index = toIndex(self.length, i, j)
-                H[index] = 0
-        
-        for i in range(0, self.length):
-            for j in range(0, self.length):
-                # x, y = toCoordinate()
-                index = toIndex(self.length, i, j )
-                right = getRight(self.length, index )
-                bottom = getBottom(self.length,  index)
-                bottomRight = getBottomRight(self.length, index )
+                index = toIndex(_L, i, j )
+                right = getRight(_L, index )
+                bottom = getBottom(_L,  index)
+                bottomRight = getBottomRight(_L, index )
                 
                 J[(index, right)] = J_layer
                 J[(index, bottom)] = J_layer
@@ -34,9 +28,28 @@ class Solver:
         
         return H, J
     
-    def customConnect() -> tuple[dict, dict]:
+    def spacefileConnect(file:str) -> tuple[dict, dict]:
         H = dict()
         J = dict()
+        
+        index = 1
+        for i in range ( len(file) ):
+            if("couplings" in file[i]):
+                index = i
+                break
+        
+        for i in range ( index, len(file) ):
+            coupling = file[i].split()
+            if( len(coupling) == 2 ):
+                node = int( coupling[0] )
+                magnetic_field = float( coupling[1] )
+                H[node] = magnetic_field
+            elif( len(coupling) == 3 ):
+                node1 = int( coupling[0] )
+                node2 = int( coupling[1] )
+                strength = float( coupling[2] )
+                J[(node1, node2)] = strength
+                
         
         return H, J
     
@@ -47,9 +60,8 @@ class Solver:
         print(sampleset)
     
     def printIsing(self, H, J, Graph = False):
-        print("\n == Magnetic Field == ")
-        
-        if( H!=None ):
+        if( len(H) != 0 ):
+            print("\n == Magnetic Field == ")
             Hkeys = list(H.keys())
             for k in Hkeys:
                 print(f"[{k}]: {H[k]}")
@@ -71,7 +83,8 @@ class Solver:
                 key2 = []
                 val = []
             key2.append(k[1])
-            val.append(J[k])
-        
+            val.append(J[(k[0], k[1])])
+                    
         print(f"[{key1}] -> {key2}: {val}")
         # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")
+                    
