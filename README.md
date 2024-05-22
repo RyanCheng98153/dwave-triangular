@@ -4,22 +4,15 @@ Hope you have a great day :blush:
 
 ## dwave prior work
 *If virtualenv does not exist*
-
-- Macs
-    `sudo pip install virtualenv`
-    
-- Windows
-    `pip install virtualenv`
-    
 1. Create a new virtual environment of d-wave named quantum
-    `virtualenv quantum`
+    `python -m venv venv`
     
 2. Enter the virtual environment
     - Macs
-        `source quantum/bin/activate` 
+        `source venv/bin/activate` 
         
     - Windows
-        `./quantum/Scripts\activate.ps1` 
+        `./venv/Scripts/activate.ps1` 
         
 3. Confirmed the dwave-ocean sdk is not installed
     `pip uninstall dwave-ocean-sdk`
@@ -28,6 +21,9 @@ Hope you have a great day :blush:
     `python -m pip install --upgrade pip`
 
 ## requirements
+```bash
+pip install -r ./requirements.txt
+```
 
 ## usage
 - Execution with argument: L*L ising model 
