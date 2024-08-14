@@ -34,9 +34,7 @@ class Run(object):
         self.Length, self.Height = length, height
         self.__runSolver(H, J)
 
-    def runSpace(self, filename:str):
-        print("Space!!")
-        H, J = dict(), dict()
+    def runSpaceFile(self, filename:str):
         file = getfileData( filename )
         self.Length, self.Height = getModelSize(file)
         H, J = Solver.spacefileConnect(file)
