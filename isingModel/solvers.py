@@ -53,22 +53,27 @@ class Solver:
         
         return H, J
     
-    def doExactSolver(self, H, J):
-        sampleset = dimod.ExactSolver().sample_ising(H, J)
+    def doExactSolver(self, _H, _J):
+        sampleset = dimod.ExactSolver().sample_ising(_H, _J)
         
         print("=== Result ===")
         print(sampleset)
+        
+    def doQPUSolver(self, _H, _J):
+        print(f"H: {_H}")
+        print(f"J: {_J}")
+        pass
     
-    def printIsing(self, H, J, Graph = False):
-        if( len(H) != 0 ):
+    def printIsing(self, _H, _J, Graph = False):
+        if( len(_H) != 0 ):
             print("\n == Magnetic Field == ")
-            Hkeys = list(H.keys())
+            Hkeys = list(_H.keys())
             for k in Hkeys:
-                print(f"[{k}]: {H[k]}")
+                print(f"[{k}]: {_H[k]}")
                 
         print("\n == Jconnected == ")
         
-        Jkeys = list(J.keys())
+        Jkeys = list(_J.keys())
         key1 = None
         key2 = []
         val = []
@@ -83,7 +88,7 @@ class Solver:
                 key2 = []
                 val = []
             key2.append(k[1])
-            val.append(J[(k[0], k[1])])
+            val.append( _J[(k[0], k[1])])
                     
         print(f"[{key1}] -> {key2}: {val}")
         # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")

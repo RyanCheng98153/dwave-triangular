@@ -73,8 +73,10 @@ def main():
         exit()
     
     solver = Solver(Length, Height)
-    solver.doExactSolver(H, J)
-    solver.printIsing(H, J)
+    # solver.doExactSolver(_H, _J)
+    solver.doQPUSolver(H, J)
+    # solver.printIsing(H, J)
+    
 
 def test(status:bool):
     # for testing
