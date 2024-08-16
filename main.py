@@ -32,18 +32,23 @@ class Run(object):
     ):
         H, J = Solver.fullyConnect(length, height , JL, JH)
         self.Length, self.Height = length, height
-        self.__runSolver(H, J)
+        self.__runExactSolver(H, J)
 
     def runSpaceFile(self, filename:str):
         file = getfileData( filename )
         self.Length, self.Height = getModelSize(file)
         H, J = Solver.spacefileConnect(file)
         
-        self.__runSolver(H, J)
+        self.__runExactSolver(H, J)
         
-    def __runSolver(self, _H, _J):
+    def __runExactSolver(self, _H, _J):
         solver = Solver(self.Length, self.Height)
         solver.doExactSolver(_H, _J)
+        solver.printIsing(_H, _J)
+        
+    def __runQPUSolver(self, _H, _J,):
+        solver = Solver(self.Length, self.Height)
+        solver.doQPUSolver(_H, _J)
         solver.printIsing(_H, _J)
 
 def main():
