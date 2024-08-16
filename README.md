@@ -32,6 +32,10 @@ pip install -r ./requirements.txt
     ```python ./main [-file path]``` 
     ex: ```python ./main ./example.txt```
 
+- Execute with custom size `L*L*H` and bonds `-JL`, `-JH` triangular ising model
+    ```python .\main.py runIsing -l [L] -h [H] -JL [-JL] -JH [-JH]```
+    ex: ```python .\main.py runIsing -l 3 -h 1 -JL 1.0 -JH 1.0```
+
 ## File Format
 - Space Separate File Format
 ``` 
