@@ -1,6 +1,8 @@
 from dimod import BinaryQuadraticModel
 from isingModel.utils import *
 import dimod
+from dwave.system import DWaveSampler, EmbeddingComposite
+
 
 class Solver:
     def __init__(self, _L, _H) -> None:
@@ -56,13 +58,16 @@ class Solver:
     def doExactSolver(self, _H, _J):
         sampleset = dimod.ExactSolver().sample_ising(_H, _J)
         
-        print("=== Result ===")
-        print(sampleset)
+        return sampleset
         
     def doQPUSolver(self, _H, _J):
-        print(f"H: {_H}")
-        print(f"J: {_J}")
-        pass
+        # print(f"H: {_H}")
+        # print(f"J: {_J}")
+        sampler = EmbeddingComposite(DWaveSampler())
+
+        sampleset = sampler.sample_ising(_H, _J,
+                                 label="Test Ising Problem 1")
+        return sampleset
     
     def printIsing(self, _H, _J, Graph = False):
         if( len(_H) != 0 ):
