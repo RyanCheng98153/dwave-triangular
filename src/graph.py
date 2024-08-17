@@ -1,5 +1,5 @@
-from isingModel.utils import *
-from isingModel.node import Node, Spin
+from src.utils import *
+from src.node import Node, Spin
         
 class Graph:
     def __init__(self, 

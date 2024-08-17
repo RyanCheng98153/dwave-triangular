@@ -1,5 +1,5 @@
 from dimod import BinaryQuadraticModel
-from isingModel.utils import *
+from src.utils import *
 import dimod
 from dwave.system import DWaveSampler, EmbeddingComposite
 

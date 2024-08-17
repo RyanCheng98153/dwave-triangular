@@ -1,24 +1,8 @@
 import sys
-# from argv import Args
-from isingModel.graph import *
-from isingModel.solvers import Solver
-import json
-import os
+from src.graph import *
+from src.solvers import Solver
+from src.helper import Helper
 import fire
-
-def getfileData(filestr:str):
-    with open(filestr) as f:
-        data = f.readlines()
-        return data
-
-def getJson(filestr:str):
-    return json.loads( getfileData(filestr) )
-
-def getModelSize(file:str):
-    for i in range ( len(file) ):
-        if("model_size" in file[i]):
-            model_size = file[i+1].split()
-            return int(model_size[0]), int(model_size[2])
 
 class Run(object):
     def __init__( self ):
@@ -37,8 +21,8 @@ class Run(object):
         self.__runExactSolver(H, J)
 
     def runSpaceFile(self, filename:str):
-        file = getfileData( filename )
-        self.Length, self.Height = getModelSize(file)
+        file = Helper.getfileData( filename )
+        self.Length, self.Height = Helper.getModelSize(file)
         H, J = Solver.spacefileConnect(file)
         
         self.__runExactSolver(H, J)
@@ -56,38 +40,6 @@ class Run(object):
         print("=== Result ===")
         print(sampleset)
         solver.printIsing(_H, _J)
-
-def main():
-    H = dict()
-    J = dict()
-    
-    inputStr = sys.argv[1]
-    
-    Length = 1
-    Height = 1
-    
-    J_layer = 1.0
-    J_height = 1.0
-    
-    if (inputStr.isnumeric()):
-        Length = int( inputStr )
-        print(Length)
-        H, J = Solver.fullyConnect(Length, Height ,J_layer, J_height)
-        
-    elif (os.path.exists(inputStr)):    
-        file = getfileData( inputStr )
-        Length, Height = getModelSize(file)
-        H, J = Solver.spacefileConnect(file)
-        
-    else:
-        print("exit: invalid str!")
-        exit()
-    
-    solver = Solver(Length, Height)
-    # solver.doExactSolver(_H, _J)
-    solver.doQPUSolver(H, J)
-    # solver.printIsing(H, J)
-    
 
 def test(status:bool):
     # for testing
