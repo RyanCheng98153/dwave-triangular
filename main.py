@@ -48,7 +48,7 @@ class Run(object):
         sampleset = solver.doExactSolver(_H, _J)
         print("=== Result ===")
         print(sampleset)
-        # solver.printIsing(_H, _J)
+        solver.printIsing(_H, _J)
         
     def __runQPUSolver(self, _H, _J,):
         solver = Solver(self.Length, self.Height)
