@@ -32,6 +32,8 @@ class Run(object):
     ):
         H, J = Solver.fullyConnect(length, height , JL, JH)
         self.Length, self.Height = length, height
+        
+        # self.__runQPUSolver(H, J)
         self.__runExactSolver(H, J)
 
     def runSpaceFile(self, filename:str):
@@ -43,12 +45,16 @@ class Run(object):
         
     def __runExactSolver(self, _H, _J):
         solver = Solver(self.Length, self.Height)
-        solver.doExactSolver(_H, _J)
-        solver.printIsing(_H, _J)
+        sampleset = solver.doExactSolver(_H, _J)
+        print("=== Result ===")
+        print(sampleset)
+        # solver.printIsing(_H, _J)
         
     def __runQPUSolver(self, _H, _J,):
         solver = Solver(self.Length, self.Height)
-        solver.doQPUSolver(_H, _J)
+        sampleset = solver.doQPUSolver(_H, _J)
+        print("=== Result ===")
+        print(sampleset)
         solver.printIsing(_H, _J)
 
 def main():
