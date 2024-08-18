@@ -50,3 +50,7 @@ couplings
 1 2 0.8
 2 1 0.6
 ```
+
+## Notes: 
+`dwave auth login --oob` for dwave auth login
+`dwave auth get` for getting dwave auth tokens
