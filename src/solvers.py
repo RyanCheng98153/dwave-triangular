@@ -60,7 +60,7 @@ class Solver:
         
         return sampleset
         
-    def doQPUSolver(self, _H, _J):
+    def doQPUSolver(self, _H, _J, _token:str):
         # print(f"H: {_H}")
         # print(f"J: {_J}")
         sampler = EmbeddingComposite(DWaveSampler())

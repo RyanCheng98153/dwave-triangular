@@ -17,3 +17,9 @@ class Helper:
             if("model_size" in file[i]):
                 model_size = file[i+1].split()
                 return int(model_size[0]), int(model_size[2])
+
+    @staticmethod
+    def getAPItoken(filepath:str):
+        with open(filepath, 'r', encoding='utf-8') as F:
+            return F.readlines()
+            
