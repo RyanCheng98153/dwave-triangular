@@ -11,15 +11,23 @@ class Run(object):
     def runIsing(self, 
         length:int = 3, 
         height:int = 1,
-        JL:int = 1.0, 
-        JH:int = 1.0 
+        JL:float = 1.0, 
+        JH:float = 1.0, 
+        solverType: int = 0,
+        _token: str = ''
     ):
         H, J = Solver.fullyConnect(length, height , JL, JH)
         self.Length, self.Height = length, height
         
-        # self.__runQPUSolver(H, J)
-        self.__runExactSolver(H, J)
-
+        if (solverType == 0):
+            sampleset = self.__runExactSolver(H, J)
+            return sampleset
+        if (solverType == 1):
+            sampleset = self.__runQPUSolver(H, J, _token = _token)
+            return sampleset
+        else:
+            return
+        
     def runSpaceFile(self, filename:str):
         file = Helper.getfileData( filename )
         self.Length, self.Height = Helper.getModelSize(file)
@@ -30,16 +38,18 @@ class Run(object):
     def __runExactSolver(self, _H, _J):
         solver = Solver(self.Length, self.Height)
         sampleset = solver.doExactSolver(_H, _J)
-        print("=== Result ===")
-        print(sampleset)
-        solver.printIsing(_H, _J)
+        # print("=== Result ===")
+        # print(sampleset)
+        # solver.printIsing(_H, _J)
+        return sampleset
         
-    def __runQPUSolver(self, _H, _J,):
+    def __runQPUSolver(self, _H, _J, _token):
         solver = Solver(self.Length, self.Height)
-        sampleset = solver.doQPUSolver(_H, _J)
-        print("=== Result ===")
-        print(sampleset)
-        solver.printIsing(_H, _J)
+        sampleset = solver.doQPUSolver(_H, _J, _token=_token)
+        # print("=== Result ===")
+        # print(sampleset)
+        # solver.printIsing(_H, _J)
+        return sampleset
 
 def test(status:bool):
     # for testing
