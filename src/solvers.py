@@ -56,17 +56,21 @@ class Solver:
         return H, J
     
     def doExactSolver(self, _H, _J):
-        sampleset = dimod.ExactSolver().sample_ising(_H, _J)
+        sampleset = dimod.ExactSolver().sample_ising(_H, _J,
+                                                    label="Test Ising Problem 1",
+                                                    num_reads=3)
         
         return sampleset
         
-    def doQPUSolver(self, _H, _J, _token:str):
+#    def doQPUSolver(self, _H, _J, _token:str):
+    def doQPUSolver(self, _H, _J):
         # print(f"H: {_H}")
         # print(f"J: {_J}")
         sampler = EmbeddingComposite(DWaveSampler())
 
-        sampleset = sampler.sample_ising(_H, _J,
-                                 label="Test Ising Problem 1")
+        sampleset = sampler.sample_ising( _H, _J,
+                                 label="Test Ising Problem 1",
+                                 num_reads=3)
         return sampleset
     
     def printIsing(self, _H, _J, Graph = False):

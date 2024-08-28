@@ -4,6 +4,12 @@ from src.solvers import Solver
 from src.helper import Helper
 import fire
 
+from enum import IntEnum
+class PickSolver(IntEnum):
+    NO_SOLVER: int = 0
+    EXACT_SOLVER: int = 1
+    QPU_SOLVER:int = 2
+
 class Run(object):
     def __init__( self ):
         pass
@@ -13,17 +19,29 @@ class Run(object):
         height:int = 1,
         JL:float = 1.0, 
         JH:float = 1.0, 
-        solverType: int = 0,
-        _token: str = ''
+        solverType: PickSolver = PickSolver.NO_SOLVER,
     ):
         H, J = Solver.fullyConnect(length, height , JL, JH)
         self.Length, self.Height = length, height
         
-        if (solverType == 0):
-            sampleset = self.__runExactSolver(H, J)
+        if (solverType == PickSolver.NO_SOLVER):
+            raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
+            
+        if (solverType == PickSolver.EXACT_SOLVER):
+            solver = Solver(self.Length, self.Height)
+            sampleset = solver.doExactSolver(H, J)
+            # print("=== Result ===")
+            # print(sampleset)
+            # solver.printIsing(_H, _J)
+            
             return sampleset
-        if (solverType == 1):
-            sampleset = self.__runQPUSolver(H, J, _token = _token)
+        if (solverType == PickSolver.QPU_SOLVER):
+            solver = Solver(self.Length, self.Height)
+            sampleset = solver.doQPUSolver(H, J)
+            # print("=== Result ===")
+            # print(sampleset)
+            # solver.printIsing(_H, _J)
+            
             return sampleset
         else:
             return
@@ -34,22 +52,6 @@ class Run(object):
         H, J = Solver.spacefileConnect(file)
         
         self.__runExactSolver(H, J)
-        
-    def __runExactSolver(self, _H, _J):
-        solver = Solver(self.Length, self.Height)
-        sampleset = solver.doExactSolver(_H, _J)
-        # print("=== Result ===")
-        # print(sampleset)
-        # solver.printIsing(_H, _J)
-        return sampleset
-        
-    def __runQPUSolver(self, _H, _J, _token):
-        solver = Solver(self.Length, self.Height)
-        sampleset = solver.doQPUSolver(_H, _J, _token=_token)
-        # print("=== Result ===")
-        # print(sampleset)
-        # solver.printIsing(_H, _J)
-        return sampleset
 
 def test(status:bool):
     # for testing
