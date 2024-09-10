@@ -1,6 +1,6 @@
-from src.helper import Helper
 from src.solvers import Solver
-# from src.graph import *
+from src.ising import Ising
+from src.utils import getfileData, getModelSize
 import sys
 import fire
 
@@ -17,38 +17,34 @@ class Run(object):
     def runIsing(self, 
         L:int = 3,
         JL:float = 1.0, 
-        # solverType: PickSolver = PickSolver.NO_SOLVER
     ):
         sampleset = "nothing~"
-        H, J = Solver.fullyConnect(L, JL)
+        H, J = Ising.triangular(L, JL)
         self.Length = L
-        solverType: PickSolver = PickSolver.EXACT_SOLVER
+        solverType: PickSolver = PickSolver.NO_SOLVER
         
         if (solverType == PickSolver.NO_SOLVER):
             sampleset = "No Solver"
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
             
         if (solverType == PickSolver.EXACT_SOLVER):
-            print("hi")
-            solver = Solver(L, JL )
-            sampleset = solver.doExactSolver(H, J)
+            sampleset = Solver.doExactSolver(H, J)
             
         if (solverType == PickSolver.QPU_SOLVER):
-            solver = Solver(self.Length, JL)
-            sampleset = solver.doQPUSolver(H, J, "test", 1)
+            sampleset = Solver.doQPUSolver(H, J, "test", 1)
             
         
         # print("=== Result ===")
         print(sampleset)
-        solver.printIsing(H, J)
+        # Solver.printIsing(H, J)
         # return sampleset
         
     def runSpaceFile(self, filename:str):
-        file = Helper.getfileData( filename )
-        self.Length, self.Height = Helper.getModelSize(file)
-        H, J = Solver.spacefileConnect(file)
+        file = getfileData( filename )
+        self.Length, self.Height = getModelSize(file)
+        H, J = Ising.spacefileConnect(file)
         
-        sampleset = Solver.spacefileConnect(H, J)
+        sampleset = Solver.doExactSolver(H, J)
         print(sampleset)
 
 def test(status:bool):
