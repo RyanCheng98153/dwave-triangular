@@ -54,9 +54,9 @@ class Solver:
         
         return H, J
     
-    def doExactSolver(self, _H: dict, _J: dict, _taskname: str, _num_samples: int):
+    def doExactSolver(self, _H: dict, _J: dict):
         sampler: dimod.ExactSolver = dimod.ExactSolver()
-        sampleset = sampler.sample_ising(_H, _J, label=_taskname, num_reads=_num_samples)
+        sampleset = sampler.sample_ising(_H, _J)
         
         return sampleset
         

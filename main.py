@@ -31,19 +31,16 @@ class Run(object):
         if (solverType == PickSolver.EXACT_SOLVER):
             print("hi")
             solver = Solver(L, JL )
-            sampleset = solver.doExactSolver(H, J, "test", 1)
-            # print("=== Result ===")
-            # print(sampleset)
-            # solver.printIsing(_H, _J)
+            sampleset = solver.doExactSolver(H, J)
             
         if (solverType == PickSolver.QPU_SOLVER):
             solver = Solver(self.Length, JL)
             sampleset = solver.doQPUSolver(H, J, "test", 1)
-            # print("=== Result ===")
-            # print(sampleset)
-            # solver.printIsing(_H, _J)
             
+        
+        # print("=== Result ===")
         print(sampleset)
+        solver.printIsing(H, J)
         # return sampleset
         
     def runSpaceFile(self, filename:str):
