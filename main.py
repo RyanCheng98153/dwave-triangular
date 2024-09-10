@@ -51,7 +51,8 @@ class Run(object):
         self.Length, self.Height = Helper.getModelSize(file)
         H, J = Solver.spacefileConnect(file)
         
-        self.__runExactSolver(H, J)
+        sampleset = Solver.spacefileConnect(H, J)
+        print(sampleset)
 
 def test(status:bool):
     # for testing
