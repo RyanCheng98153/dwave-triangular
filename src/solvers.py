@@ -50,24 +50,25 @@ class Solver:
                 node2 = int( coupling[1] )
                 strength = float( coupling[2] )
                 J[(node1, node2)] = strength
-                
         
         return H, J
     
-    def doExactSolver(self, _H: dict, _J: dict):
+    @staticmethod
+    def doExactSolver(_H: dict, _J: dict):
         sampler: dimod.ExactSolver = dimod.ExactSolver()
         sampleset = sampler.sample_ising(_H, _J)
         
         return sampleset
         
-#    def doQPUSolver(self, _H, _J, _token:str):
-    def doQPUSolver(self, _H, _J, _taskname, _num_samples: int):
+    @staticmethod
+    def doQPUSolver(_H, _J, _taskname, _num_samples: int):
         sampler: EmbeddingComposite = EmbeddingComposite(DWaveSampler())
         sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
         
         return sampleset
     
-    def printIsing(self, _H, _J, Graph = False):
+    @staticmethod
+    def printIsing(_H, _J):
         if( len(_H) != 0 ):
             print("\n == Magnetic Field == ")
             Hkeys = list(_H.keys())

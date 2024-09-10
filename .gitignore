@@ -8,3 +8,5 @@ __pycache__/
 
 # virtualenv
 .venv
+
+results/Exact/
