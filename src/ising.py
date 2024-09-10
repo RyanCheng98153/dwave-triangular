@@ -21,17 +21,11 @@ class Ising:
         return H, J
     
     @staticmethod
-    def spacefileConnect(file:str) -> tuple[dict, dict]:
+    def spacefileConnect(file:list[str]) -> tuple[dict, dict]:
         H = dict()
         J = dict()
         
-        index = 1
-        for i in range ( len(file) ):
-            if("couplings" in file[i]):
-                index = i
-                break
-        
-        for i in range ( index, len(file) ):
+        for i in range (len(file)):
             coupling = file[i].split()
             if( len(coupling) == 2 ):
                 node = int( coupling[0] )

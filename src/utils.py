@@ -2,7 +2,7 @@ import json
 
 def getfileData(filestr:str):
     with open(filestr) as f:
-        data = f.readlines()
+        data = [line for line in f.readlines() if not line.startswith("#")]
         return data
 
 def getJson(filestr:str):

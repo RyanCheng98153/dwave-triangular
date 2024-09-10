@@ -21,7 +21,7 @@ class Run(object):
         sampleset = "nothing~"
         H, J = Ising.triangular(L, JL)
         self.Length = L
-        solverType: PickSolver = PickSolver.NO_SOLVER
+        solverType: PickSolver = PickSolver.EXACT_SOLVER
         
         if (solverType == PickSolver.NO_SOLVER):
             sampleset = "No Solver"
@@ -35,13 +35,13 @@ class Run(object):
             
         
         # print("=== Result ===")
-        print(sampleset)
-        # Solver.printIsing(H, J)
+        # print(sampleset)
+        Solver.printIsing(H, J)
         # return sampleset
         
     def runSpaceFile(self, filename:str):
         file = getfileData( filename )
-        self.Length, self.Height = getModelSize(file)
+        # self.Length, self.Height = getModelSize(file)
         H, J = Ising.spacefileConnect(file)
         
         sampleset = Solver.doExactSolver(H, J)

@@ -1,6 +1,5 @@
 import dimod
 from dwave.system import DWaveSampler, EmbeddingComposite
-from src.utils import toIndex, getRight, getBottom, getBottomRight
 
 class Solver:
     @staticmethod
