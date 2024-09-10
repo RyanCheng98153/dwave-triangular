@@ -5,10 +5,12 @@ from dwave.system import DWaveSampler, EmbeddingComposite
 
 
 class Solver:
-    def __init__(self, _L, _H) -> None:
+    def __init__(self, _L, _H, _JL, _JH) -> None:
         bqm = BinaryQuadraticModel('BINARY')
         self.length = _L
         self.height = _H
+        self.JL = _JL
+        self.JH = _JH
         
         pass
     
@@ -69,7 +71,7 @@ class Solver:
         sampler = EmbeddingComposite(DWaveSampler())
 
         sampleset = sampler.sample_ising( _H, _J,
-                                 label="Test Ising Problem 1",
+                                 label=f"triangular_L_{self.length}_H_{self.height}_JL_{self.JL}_JH_{self.JH}",
                                  num_reads=3)
         return sampleset
     

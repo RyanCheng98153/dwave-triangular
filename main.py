@@ -28,7 +28,7 @@ class Run(object):
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
             
         if (solverType == PickSolver.EXACT_SOLVER):
-            solver = Solver(self.Length, self.Height)
+            solver = Solver(self.Length, self.Height, JL, JH)
             sampleset = solver.doExactSolver(H, J)
             # print("=== Result ===")
             # print(sampleset)
@@ -36,7 +36,7 @@ class Run(object):
             
             return sampleset
         if (solverType == PickSolver.QPU_SOLVER):
-            solver = Solver(self.Length, self.Height)
+            solver = Solver(self.Length, self.Height, JL, JH)
             sampleset = solver.doQPUSolver(H, J)
             # print("=== Result ===")
             # print(sampleset)
