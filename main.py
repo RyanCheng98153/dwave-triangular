@@ -1,11 +1,11 @@
 import sys
-from src.graph import *
+# from src.graph import *
 from src.solvers import Solver
 from src.helper import Helper
 import fire
 
-from enum import IntEnum
-class PickSolver(IntEnum):
+from enum import Enum
+class PickSolver(Enum):
     NO_SOLVER: int = 0
     EXACT_SOLVER: int = 1
     QPU_SOLVER:int = 2
@@ -15,36 +15,36 @@ class Run(object):
         pass
         
     def runIsing(self, 
-        length:int = 3, 
-        height:int = 1,
+        L:int = 3,
         JL:float = 1.0, 
-        JH:float = 1.0, 
-        solverType: PickSolver = PickSolver.NO_SOLVER,
+        # solverType: PickSolver = PickSolver.NO_SOLVER
     ):
-        H, J = Solver.fullyConnect(length, height , JL, JH)
-        self.Length, self.Height = length, height
+        sampleset = "nothing~"
+        H, J = Solver.fullyConnect(L, JL)
+        self.Length = L
+        solverType: PickSolver = PickSolver.EXACT_SOLVER
         
         if (solverType == PickSolver.NO_SOLVER):
+            sampleset = "No Solver"
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
             
         if (solverType == PickSolver.EXACT_SOLVER):
-            solver = Solver(self.Length, self.Height, JL, JH)
-            sampleset = solver.doExactSolver(H, J)
+            print("hi")
+            solver = Solver(L, JL )
+            sampleset = solver.doExactSolver(H, J, "test", 1)
             # print("=== Result ===")
             # print(sampleset)
             # solver.printIsing(_H, _J)
             
-            return sampleset
         if (solverType == PickSolver.QPU_SOLVER):
-            solver = Solver(self.Length, self.Height, JL, JH)
-            sampleset = solver.doQPUSolver(H, J)
+            solver = Solver(self.Length, JL)
+            sampleset = solver.doQPUSolver(H, J, "test", 1)
             # print("=== Result ===")
             # print(sampleset)
             # solver.printIsing(_H, _J)
             
-            return sampleset
-        else:
-            return
+        print(sampleset)
+        # return sampleset
         
     def runSpaceFile(self, filename:str):
         file = Helper.getfileData( filename )

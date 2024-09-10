@@ -1,5 +1,5 @@
 from src.utils import *
-from src.node import Node, Spin
+from src.graph.node import Node, Spin
         
 class Graph:
     def __init__(self, 

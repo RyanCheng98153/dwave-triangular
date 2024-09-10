@@ -1,20 +1,17 @@
-from dimod import BinaryQuadraticModel
-from src.utils import *
 import dimod
 from dwave.system import DWaveSampler, EmbeddingComposite
+from src.utils import *
 
 
 class Solver:
-    def __init__(self, _L, _H, _JL, _JH) -> None:
-        bqm = BinaryQuadraticModel('BINARY')
-        self.length = _L
-        self.height = _H
-        self.JL = _JL
-        self.JH = _JH
+    def __init__(self, _L: int, _JLayer: float) -> None:
+        # bqm = BinaryQuadraticModel('BINARY')
+        self.L = _L
+        self.JL = _JLayer
         
         pass
     
-    def fullyConnect( _L:int, _H:int, J_layer:float, J_height:float=1.0 ) -> tuple[dict, dict]:
+    def fullyConnect( _L:int, _JLayer: float) -> tuple[dict, dict]:
         H = dict()
         J = dict()
         
@@ -26,9 +23,9 @@ class Solver:
                 bottom = getBottom(_L,  index)
                 bottomRight = getBottomRight(_L, index )
                 
-                J[(index, right)] = J_layer
-                J[(index, bottom)] = J_layer
-                J[(index, bottomRight)] = J_layer
+                J[(index, right)] = _JLayer
+                J[(index, bottom)] = _JLayer
+                J[(index, bottomRight)] = _JLayer
         
         return H, J
     
@@ -57,22 +54,17 @@ class Solver:
         
         return H, J
     
-    def doExactSolver(self, _H, _J):
-        sampleset = dimod.ExactSolver().sample_ising(_H, _J,
-                                                    label="Test Ising Problem 1",
-                                                    num_reads=3)
+    def doExactSolver(self, _H: dict, _J: dict, _taskname: str, _num_samples: int):
+        sampler: dimod.ExactSolver = dimod.ExactSolver()
+        sampleset = sampler.sample_ising(_H, _J, label=_taskname, num_reads=_num_samples)
         
         return sampleset
         
 #    def doQPUSolver(self, _H, _J, _token:str):
-    def doQPUSolver(self, _H, _J):
-        # print(f"H: {_H}")
-        # print(f"J: {_J}")
-        sampler = EmbeddingComposite(DWaveSampler())
-
-        sampleset = sampler.sample_ising( _H, _J,
-                                 label=f"triangular_L_{self.length}_H_{self.height}_JL_{self.JL}_JH_{self.JH}",
-                                 num_reads=3)
+    def doQPUSolver(self, _H, _J, _taskname, _num_samples: int):
+        sampler: EmbeddingComposite = EmbeddingComposite(DWaveSampler())
+        sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+        
         return sampleset
     
     def printIsing(self, _H, _J, Graph = False):
