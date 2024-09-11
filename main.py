@@ -17,32 +17,37 @@ class Run(object):
     def runIsing(self, 
         L:int = 3,
         JL:float = 1.0, 
+        solver: str = "None"
     ):
         sampleset = "nothing~"
         H, J = Ising.triangular(L, JL)
         self.Length = L
-        solverType: PickSolver = PickSolver.EXACT_SOLVER
+        solverType: PickSolver = PickSolver.NO_SOLVER
         
-        if (solverType == PickSolver.NO_SOLVER):
-            sampleset = "No Solver"
-            raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
-            
-        if (solverType == PickSolver.EXACT_SOLVER):
+        if (solver == "exact" or solverType == PickSolver.EXACT_SOLVER):
             sampleset = Solver.doExactSolver(H, J)
             
-        if (solverType == PickSolver.QPU_SOLVER):
-            sampleset = Solver.doQPUSolver(H, J, "test", 1)
+        elif (solver == "qpu" or solverType == PickSolver.QPU_SOLVER):
+            sampleset = Solver.doQPUSolver(H, J, f"triangular_L_{L}", 1)
+        
+        else:
+            sampleset = "No Solver"
+            raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
         
         # print("=== Result ===")
-        # print(sampleset)
+        print(sampleset)
         Solver.printIsing(H, J)
-        
         # return sampleset
         
-    def runSpaceFile(self, filename:str):
+    def runSpaceFile(self, filename:str, solver: str = "None"):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
-        sampleset = Solver.doExactSolver(H, J)
+        if solver == "exact":
+            sampleset = Solver.doExactSolver(H, J)
+        elif solver == "qpu":
+            sampleset = Solver.doQPUSolver(H, J, "test", 1)
+        else:
+            sampleset = "No Solver"
         
         # print("=== Result ===")
         # print(sampleset)
