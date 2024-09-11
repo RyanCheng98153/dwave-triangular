@@ -1,6 +1,6 @@
 from src.solvers import Solver
 from src.ising import Ising
-from src.utils import getfileData, getModelSize
+from src.utils import getfileData
 import sys
 import fire
 
@@ -32,7 +32,6 @@ class Run(object):
             
         if (solverType == PickSolver.QPU_SOLVER):
             sampleset = Solver.doQPUSolver(H, J, "test", 1)
-            
         
         # print("=== Result ===")
         # print(sampleset)
@@ -41,7 +40,6 @@ class Run(object):
         
     def runSpaceFile(self, filename:str):
         file = getfileData( filename )
-        # self.Length, self.Height = getModelSize(file)
         H, J = Ising.spacefileConnect(file)
         
         sampleset = Solver.doExactSolver(H, J)
