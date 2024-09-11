@@ -1,12 +1,10 @@
 # ignore vscode settings
 .vscode/
-
 # ignore python cache
 __pycache__/
-
-.env
-
 # virtualenv
 .venv
-
+# ignore environment variable
+.env
+# results directory
 results/Exact/
