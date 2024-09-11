@@ -1,4 +1,6 @@
-# It is a 
+# It is a example of space separate file to express a ising model
+# Model info: L 3 H 1
+# the comment with hashtag # in front of sentences won't be detected by the program
 1 1.0
 0 0.5
 0 1 0.5
