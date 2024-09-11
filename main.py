@@ -36,15 +36,19 @@ class Run(object):
         # print("=== Result ===")
         # print(sampleset)
         Solver.printIsing(H, J)
+        
         # return sampleset
         
     def runSpaceFile(self, filename:str):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
-        
         sampleset = Solver.doExactSolver(H, J)
-        print(sampleset)
-
+        
+        # print("=== Result ===")
+        # print(sampleset)
+        Solver.printIsing(H, J)
+        # return sampleset
+        
 def test(status:bool):
     # for testing
     if( status == False):
