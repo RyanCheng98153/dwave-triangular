@@ -21,27 +21,25 @@ Hope you have a great day :blush:
     `python -m pip install --upgrade pip`
 
 ## requirements
-```bash
-pip install -r ./requirements.txt
-```
+`pip install -r ./requirements.txt`
 
 ## usage
-- Execution with argument: L*L ising model 
-    ```python ./main [-L]```
+- Execution with triangular ising model: 
+    length: `L*L`
+    bond strength: `-JL`
+    solver: `solverType` 
+    `python .\main.py runIsing -L 3 -JL 1.0 -solverType EXACT_SOLVER`
+
 - Execution with custom couplings
     ```python ./main [-file path]``` 
     ex: ```python ./main ./example.txt```
 
-- Execute with custom size `L*L*H` and bonds `-JL`, `-JH` triangular ising model
-    ```python .\main.py runIsing -l [L] -h [H] -JL [-JL] -JH [-JH]```
-    ex: ```python .\main.py runIsing -l 3 -h 1 -JL 1.0 -JH 1.0```
-
 ## File Format
 - Space Separate File Format
-``` 
-model_size
-3 3 1
-couplings
+- using `#` as a comment for the model
+```
+# model_size
+# it is a example of space bond file
 1 1.0
 0 0.5
 0 1 0.5

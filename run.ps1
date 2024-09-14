@@ -1,1 +1,0 @@
-python .\main.py runIsing -l 3 -h 1 --JL 1.0 --JH 1.0
