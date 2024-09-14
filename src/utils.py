@@ -1,3 +1,5 @@
+import os.path
+
 def getfileData(filestr:str):
     with open(filestr) as f:
         data = [line for line in f.readlines() if not line.startswith("#")]
@@ -6,7 +8,18 @@ def getfileData(filestr:str):
 def getAPItoken(filepath:str):
     with open(filepath, 'r', encoding='utf-8') as F:
         return F.readlines()
-        
+
+def uniquifyFilename(path:str)->str:
+        filename, extension = os.path.splitext(path)
+        counter = 1
+        while os.path.exists(path):
+            originPath = path
+            path = filename + "(" + str(counter) + ")" + extension
+            counter += 1
+        if counter != 1:
+            print(f"{originPath} has existed. --> {path} is now created.")
+        return path
+
 def toIndex(L, _i, _j) -> int:
     return L*_i + _j
 

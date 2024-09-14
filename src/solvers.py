@@ -17,14 +17,15 @@ class Solver:
         return sampleset
     
     @staticmethod
-    def printIsing(_H, _J):
+    def printIsing(_H, _J, printMode=True):
+        printString = ""
         if( len(_H) != 0 ):
             print("\n == Magnetic Field == ")
             Hkeys = list(_H.keys())
             for k in Hkeys:
-                print(f"[{k}]: {_H[k]}")
+                printString += (f"[{k}]: {_H[k]}") + '\n'
                 
-        print("\n == Jconnected == ")
+        printString += ("\n == Jconnected == ") + '\n'
         
         Jkeys = list(_J.keys())
         key1 = None
@@ -34,15 +35,15 @@ class Solver:
         for k in Jkeys:
             if( key1 != k[0] ):
                 if(key1 != None):
-                    print(f"[{key1}] -> {key2}: {val}")
-                    # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")
-                    
+                    printString += (f"[{key1}] -> {key2}: {val}") + '\n'
                 key1 = k[0]
                 key2 = []
                 val = []
             key2.append(k[1])
             val.append( _J[(k[0], k[1])])
-                    
-        print(f"[{key1}] -> {key2}: {val}")
-        # print(f"[{key1}] -> {key2}: { [ f'{key2[i]}: {val[i]}' for i in range(0, len(key2)) ] } ")
-                    
+        printString += (f"[{key1}] -> {key2}: {val}") + '\n'
+        
+        if printMode:
+            print(printString)
+        else:
+            return printString
