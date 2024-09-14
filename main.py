@@ -1,6 +1,6 @@
 from src.solvers import Solver
 from src.ising import Ising
-from src.utils import getfileData, uniquifyFilename
+from src.utils import getfileData, uniquifyFilename, formatSampleset
 import sys, os
 import fire
 
@@ -35,12 +35,14 @@ class Run(object):
             sampleset = "No Solver"
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
         
-        
+        # beautiful format sampleset
         filestr = "=== Result ===\n" 
-        filestr += str(sampleset) + '\n'
+        formatted_sampleset = formatSampleset(sampleset, L*L)
+        filestr += str(formatted_sampleset) + '\n'
         
+        # choose the target directory and file 
         targetpath = f"./results/triangular/{solver.upper()}/"
-        filename = f"tri_L{L}_JL_{JL}_{solver.upper()}.txt"
+        filename = f"tri_L{L}_JL_{JL}_{solver.upper()}_sam{numResult}_.txt"
         targetfile = uniquifyFilename(targetpath + filename)
         
         if not os.path.exists(targetpath):
@@ -63,7 +65,7 @@ class Run(object):
         
         # print("=== Result ===")
         # print(sampleset)
-        Solver.printIsing(H, J, printMode=True)
+        # Solver.printIsing(H, J, printMode=True)
         return sampleset
         
 def test(status:bool):
