@@ -1,7 +1,7 @@
 from src.solvers import Solver
 from src.ising import Ising
-from src.utils import getfileData
-import sys
+from src.utils import getfileData, uniquifyFilename
+import sys, os
 import fire
 
 from enum import Enum
@@ -13,32 +13,44 @@ class PickSolver(Enum):
 class Run(object):
     def __init__( self ):
         pass
-        
+    
+    @staticmethod
     def runIsing(self, 
         L:int = 3,
         JL:float = 1.0, 
-        solver: str = "None"
+        solver: str = "None",
+        numResult: int = 1
     ):
         sampleset = "nothing~"
         H, J = Ising.triangular(L, JL)
-        self.Length = L
         solverType: PickSolver = PickSolver.NO_SOLVER
         
         if (solver == "exact" or solverType == PickSolver.EXACT_SOLVER):
             sampleset = Solver.doExactSolver(H, J)
             
         elif (solver == "qpu" or solverType == PickSolver.QPU_SOLVER):
-            sampleset = Solver.doQPUSolver(H, J, f"triangular_L_{L}", 1)
+            sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
         
         else:
             sampleset = "No Solver"
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
         
-        # print("=== Result ===")
-        print(sampleset)
-        Solver.printIsing(H, J)
-        # return sampleset
         
+        filestr = "=== Result ===\n" 
+        filestr += str(sampleset) + '\n'
+        
+        targetpath = f"./results/triangular/{solver.upper()}/"
+        filename = f"tri_L{L}_JL_{JL}_{solver.upper()}.txt"
+        targetfile = uniquifyFilename(targetpath + filename)
+        
+        if not os.path.exists(targetpath):
+            os.makedirs(targetpath)
+        with open(targetfile, "w") as f:
+            f.writelines(filestr)
+        
+        # return sampleset
+    
+    @staticmethod
     def runSpaceFile(self, filename:str, solver: str = "None"):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
@@ -51,8 +63,8 @@ class Run(object):
         
         # print("=== Result ===")
         # print(sampleset)
-        Solver.printIsing(H, J)
-        # return sampleset
+        Solver.printIsing(H, J, printMode=True)
+        return sampleset
         
 def test(status:bool):
     # for testing
