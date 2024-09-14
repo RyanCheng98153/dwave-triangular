@@ -1,3 +1,5 @@
+from math import log
+from dimod.serialization.format import Formatter
 import os.path
 
 def getfileData(filestr:str):
@@ -17,8 +19,16 @@ def uniquifyFilename(path:str)->str:
             path = filename + "(" + str(counter) + ")" + extension
             counter += 1
         if counter != 1:
-            print(f"{originPath} has existed. --> {path} is now created.")
+            pass
+            # print(f"{originPath} has existed. --> {path} is now created.")
         return path
+    
+def formatSampleset(sampleset, var_num:int):
+    w = (log(var_num) // log(10) +2)
+    formatwidth = int(w * var_num + 25)
+    
+    formatted_sampleset = Formatter(width = formatwidth).format(sampleset)
+    return formatted_sampleset
 
 def toIndex(L, _i, _j) -> int:
     return L*_i + _j

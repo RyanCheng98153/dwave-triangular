@@ -6,9 +6,9 @@ import fire
 
 from enum import Enum
 class PickSolver(Enum):
-    NO_SOLVER: int = 0
-    EXACT_SOLVER: int = 1
-    QPU_SOLVER:int = 2
+    NO_SOLVER:str = "Mone"
+    EXACT_SOLVER:str = "exact"
+    QPU_SOLVER:str = "qpu"
 
 class Run(object):
     def __init__( self ):
@@ -48,7 +48,7 @@ class Run(object):
         with open(targetfile, "w") as f:
             f.writelines(filestr)
         
-        # return sampleset
+        return sampleset
     
     @staticmethod
     def runSpaceFile(filename:str, solver: str = "None"):
