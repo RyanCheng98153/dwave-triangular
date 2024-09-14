@@ -15,7 +15,7 @@ class Run(object):
         pass
     
     @staticmethod
-    def runIsing(self, 
+    def runIsing(
         L:int = 3,
         JL:float = 1.0, 
         solver: str = "None",
@@ -51,7 +51,7 @@ class Run(object):
         # return sampleset
     
     @staticmethod
-    def runSpaceFile(self, filename:str, solver: str = "None"):
+    def runSpaceFile(filename:str, solver: str = "None"):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
         if solver == "exact":
