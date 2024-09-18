@@ -1,0 +1,783 @@
+PS E:\project\ElectroPhysics-project\dwave\triangular> .\run.bat
+
+E:\project\ElectroPhysics-project\dwave\triangular>set vars=21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255 
+
+
+E:\project\ElectroPhysics-project\dwave\triangular>set nums=3 5 10 50
+E:\project\ElectroPhysics-project\dwave\triangular>set nums=3 5 10 50
+
+E:\project\ElectroPhysics-project\dwave\triangular>for %n in (3 5 10 50) do (for %i in (21 24 27 30 33 36 39 4
+
+E:\project\ElectroPhysics-project\dwave\triangular>for %n in (3 5 10 50) do (for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult %n ) )        
+
+E:\project\ElectroPhysics-project\dwave\triangular>(for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult 3 ) )
+
+2 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult %n ) )        
+
+E:\project\ElectroPhysics-project\dwave\triangular>(for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult 3 ) )
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numReE:\project\ElectroPhysics-project\dwave\triangular>(for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult 3 ) )
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numResult 3 )
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numResult 3 )
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 440 energy num_oc. ...
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numResult 3 )
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 440 energy num_oc. ...
+0 -1 +1 -1 +1 -1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 +1 +1 ...  +1 -433.0       1 ...
+1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 ...  +1 -425.0       1 ...
+sult 3 )
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 440 energy num_oc. ...
+0 -1 +1 -1 +1 -1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 +1 +1 ...  +1 -433.0       1 ...
+1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 ...  +1 -425.0       1 ...
+2 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 -1 ...  -1 -425.0       1 ...
+['SPIN', 3 rows, 3 samples, 441 variables]
+0 -1 +1 -1 +1 -1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 +1 +1 ...  +1 -433.0       1 ...
+1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 ...  +1 -425.0       1 ...
+2 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 -1 ...  -1 -425.0       1 ...
+['SPIN', 3 rows, 3 samples, 441 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 24 -JL 1.0 -solver qpu -numRe2 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 -1 ...  -1 -425.0       1 ...
+['SPIN', 3 rows, 3 samples, 441 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 24 -JL 1.0 -solver qpu -numRe['SPIN', 3 rows, 3 samples, 441 variables]
+
+sult 3 )
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 575 energy num_oc. ...
+0 +1 +1 -1 +1 +1 +1 -1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 ...  +1 -568.0       1 ...
+1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 ...  +1 -564.0       1 ...
+2 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 +1 ...  -1 -556.0       1 ...
+['SPIN', 3 rows, 3 samples, 576 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 27 -JL 1.0 -solver qpu -numResult 3 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 728 energy num_oc. ...
+1 -1 -1 +1 -1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 -1 +1 ...  +1 -697.0       1 ...
+2 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 -1 +1 +1 ...  +1 -697.0       1 ...
+0 -1 -1 +1 -1 +1 +1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 -1 ...  -1 -693.0       1 ...
+['SPIN', 3 rows, 3 samples, 729 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 30 -JL 1.0 -solver qpu -numResult 3 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 899 energy num_oc. ...
+0 -1 +1 -1 +1 +1 -1 +1 -1 -1 -1 +1 -1 +1 -1 -1 +1 -1 ...  +1 -876.0       1 ...
+1 -1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 ...  +1 -876.0       1 ...
+2 -1 +1 +1 -1 -1 +1 +1 -1 -1 -1 +1 -1 +1 -1 -1 +1 +1 ...  +1 -864.0       1 ...
+['SPIN', 3 rows, 3 samples, 900 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 33 -JL 1.0 -solver qpu -numResult 3 ) 
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1088  energy num_oc. ...
+0 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 -1 ...   +1 -1061.0       1 ...
+1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 +1 -1 -1 -1 ...   +1 -1053.0       1 ...
+2 -1 -1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 +1 +1 -1 ...   -1 -1045.0       1 ...
+['SPIN', 3 rows, 3 samples, 1089 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 36 -JL 1.0 -solver qpu -numResult 3 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1295  energy num_oc. ...
+0 -1 +1 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 ...   +1 -1252.0       1 ...
+1 -1 +1 -1 +1 -1 -1 +1 -1 +1 +1 -1 -1 +1 +1 -1 +1 ...   +1 -1248.0       1 ...
+2 -1 +1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 ...   +1 -1224.0       1 ...
+['SPIN', 3 rows, 3 samples, 1296 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 39 -JL 1.0 -solver qpu -numResult 3 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1520  energy num_oc. ...
+0 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 -1 -1 -1 +1 -1 -1 ...   -1 -1489.0       1 ...
+2 +1 +1 -1 -1 +1 -1 -1 +1 -1 -1 -1 +1 -1 -1 +1 -1 ...   +1 -1485.0       1 ...
+1 -1 +1 -1 +1 +1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 -1 ...   +1 -1481.0       1 ...
+['SPIN', 3 rows, 3 samples, 1521 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 42 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 45 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 48 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 51 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 54 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 57 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 3 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 129 -JL 1.0 -solver qpu -numResult 3 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 255 -JL 1.0 -solver qpu -numResult 3 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 235, in sample
+    embedding = self.find_embedding(source_edgelist, target_edgelist,
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\minorminer\minorminer.py", line 41, in find_embedding
+    return __find_embedding(S, T,
+  File "minorminer\\_minorminer.pyx", line 293, in minorminer._minorminer.find_embedding
+RuntimeError: Failed during initialization.  This typically occurs when the source graph is unreasonably large or when the embedding problem is over-constrained (via max_fill, initial_chains, fixed_chains, and/or restrict_chains).
+
+E:\project\ElectroPhysics-project\dwave\triangular>(for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult 5 ) )
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 440 energy num_oc. ...
+0 +1 -1 -1 +1 -1 -1 +1 -1 +1 +1 +1 -1 +1 +1 -1 +1 -1 ...  -1 -437.0       1 ...
+1 +1 -1 +1 +1 -1 +1 -1 -1 +1 +1 -1 +1 -1 +1 -1 -1 +1 ...  -1 -433.0       1 ...
+2 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 ...  -1 -429.0       1 ...
+3 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 -1 +1 ...  +1 -429.0       1 ...
+4 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 ...  -1 -429.0       1 ...
+['SPIN', 5 rows, 5 samples, 441 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 24 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 575 energy num_oc. ...
+0 -1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 +1 -1 ...  -1 -560.0       1 ...
+1 -1 -1 +1 +1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 +1 -1 -1 ...  +1 -560.0       1 ...
+2 -1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 +1 +1 -1 +1 +1 -1 ...  -1 -560.0       1 ...
+3 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 +1 ...  +1 -552.0       1 ...
+4 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 ...  -1 -548.0       1 ...
+['SPIN', 5 rows, 5 samples, 576 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 27 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 728 energy num_oc. ...
+0 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 +1 -1 -1 ...  -1 -721.0       1 ...
+1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 ...  +1 -713.0       1 ...
+2 +1 +1 -1 -1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 ...  +1 -701.0       1 ...
+3 +1 +1 -1 -1 -1 +1 -1 +1 -1 +1 +1 -1 +1 -1 +1 -1 +1 ...  -1 -697.0       1 ...
+4 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 +1 -1 -1 +1 +1 +1 ...  -1 -693.0       1 ...
+['SPIN', 5 rows, 5 samples, 729 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 30 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 899 energy num_oc. ...
+0 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 ...  -1 -884.0       1 ...
+1 -1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 +1 -1 -1 +1 ...  +1 -872.0       1 ...
+2 -1 +1 -1 +1 -1 +1 -1 -1 +1 +1 -1 +1 +1 +1 -1 +1 +1 ...  +1 -868.0       1 ...
+3 -1 -1 -1 +1 -1 -1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 ...  -1 -868.0       1 ...
+4 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 -1 -1 +1 +1 -1 -1 +1 ...  -1 -856.0       1 ...
+['SPIN', 5 rows, 5 samples, 900 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 33 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1088  energy num_oc. ...
+0 -1 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 ...   -1 -1057.0       1 ...
+1 -1 +1 -1 -1 -1 +1 -1 +1 -1 +1 +1 +1 -1 -1 +1 -1 ...   +1 -1057.0       1 ...
+2 +1 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 +1 -1 ...   -1 -1041.0       1 ...
+3 +1 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 -1 -1 +1 -1 -1 ...   -1 -1033.0       1 ...
+4 -1 -1 -1 -1 +1 -1 +1 +1 -1 +1 -1 +1 -1 -1 +1 -1 ...   -1 -1021.0       1 ...
+['SPIN', 5 rows, 5 samples, 1089 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 36 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1295  energy num_oc. ...
+0 -1 -1 +1 -1 +1 +1 -1 +1 -1 -1 -1 +1 -1 +1 +1 -1 ...   -1 -1244.0       1 ...
+1 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 ...   +1 -1244.0       1 ...
+2 +1 -1 +1 +1 -1 -1 +1 +1 -1 +1 +1 +1 -1 +1 +1 -1 ...   -1 -1244.0       1 ...
+3 +1 -1 +1 -1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 ...   -1 -1244.0       1 ...
+4 -1 -1 +1 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 ...   -1 -1220.0       1 ...
+['SPIN', 5 rows, 5 samples, 1296 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 39 -JL 1.0 -solver qpu -numResult 5 )    
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1520  energy num_oc. ...
+0 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 +1 ...   +1 -1501.0       1 ...
+1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 ...   -1 -1493.0       1 ...
+2 -1 +1 -1 +1 -1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 ...   +1 -1485.0       1 ...
+3 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 ...   +1 -1477.0       1 ...
+4 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 -1 +1 -1 ...   +1 -1465.0       1 ...
+['SPIN', 5 rows, 5 samples, 1521 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 42 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 45 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 48 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 51 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 54 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 57 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 5 )    
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 129 -JL 1.0 -solver qpu -numResult 5 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 255 -JL 1.0 -solver qpu -numResult 5 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 235, in sample
+    embedding = self.find_embedding(source_edgelist, target_edgelist,
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\minorminer\minorminer.py", line 41, in find_embedding
+    return __find_embedding(S, T,
+  File "minorminer\\_minorminer.pyx", line 293, in minorminer._minorminer.find_embedding
+RuntimeError: Failed during initialization.  This typically occurs when the source graph is unreasonably large or when the embedding problem is over-constrained (via max_fill, initial_chains, fixed_chains, and/or restrict_chains).
+
+E:\project\ElectroPhysics-project\dwave\triangular>(for %i in (21 24 27 30 33 36 39 42 45 48 51 54 57 60 129 255) do (python .\main.py runIsing -L %i -JL 1.0 -solver qpu -numResult 10 ) )
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 21 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 440 energy num_oc. ...
+0 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 ...  +1 -433.0       1 ...
+1 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 +1 +1 -1 -1 ...  -1 -429.0       1 ...
+2 +1 -1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 ...  -1 -425.0       1 ...
+3 +1 -1 +1 +1 -1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 -1 ...  -1 -425.0       1 ...
+4 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 +1 ...  -1 -425.0       1 ...
+7 -1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 -1 +1 -1 -1 +1 ...  -1 -425.0       1 ...
+5 -1 -1 +1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 -1 +1 +1 ...  +1 -421.0       1 ...
+6 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 -1 ...  -1 -421.0       1 ...
+8 +1 -1 +1 -1 -1 +1 -1 -1 -1 +1 +1 -1 -1 -1 +1 -1 +1 ...  -1 -417.0       1 ...
+9 -1 -1 +1 -1 -1 -1 +1 +1 -1 +1 +1 +1 -1 +1 -1 +1 +1 ...  -1 -417.0       1 ...
+['SPIN', 10 rows, 10 samples, 441 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 24 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 575 energy num_oc. ...
+0 -1 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 -1 +1 -1 ...  +1 -556.0       1 ...
+1 -1 +1 -1 +1 -1 +1 +1 -1 +1 -1 +1 +1 +1 -1 -1 +1 -1 ...  +1 -552.0       1 ...
+2 -1 -1 +1 -1 -1 -1 +1 +1 -1 +1 -1 -1 +1 -1 -1 +1 +1 ...  -1 -552.0       1 ...
+3 -1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 +1 +1 -1 +1 -1 -1 ...  +1 -552.0       1 ...
+4 +1 -1 +1 +1 +1 +1 -1 +1 +1 -1 -1 +1 +1 +1 -1 -1 +1 ...  -1 -552.0       1 ...
+5 +1 +1 -1 +1 -1 -1 -1 +1 -1 +1 +1 -1 +1 -1 -1 +1 +1 ...  -1 -552.0       1 ...
+7 -1 +1 +1 -1 -1 +1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 +1 ...  +1 -552.0       1 ...
+6 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 ...  -1 -548.0       1 ...
+8 +1 -1 +1 -1 -1 -1 +1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 ...  -1 -540.0       1 ...
+9 -1 +1 -1 -1 -1 +1 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 +1 ...  +1 -536.0       1 ...
+['SPIN', 10 rows, 10 samples, 576 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 27 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 728 energy num_oc. ...
+0 -1 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 -1 +1 +1 -1 +1 ...  +1 -709.0       1 ...
+1 +1 +1 -1 +1 -1 +1 -1 -1 +1 +1 -1 +1 -1 -1 +1 -1 -1 ...  -1 -705.0       1 ...
+3 +1 +1 -1 +1 -1 -1 +1 -1 -1 -1 +1 -1 -1 +1 -1 -1 +1 ...  +1 -705.0       1 ...
+2 -1 -1 +1 -1 +1 +1 -1 +1 -1 +1 +1 +1 -1 +1 -1 -1 +1 ...  -1 -701.0       1 ...
+4 -1 -1 +1 -1 +1 +1 +1 -1 +1 -1 +1 +1 +1 +1 -1 -1 +1 ...  -1 -701.0       1 ...
+5 +1 +1 -1 +1 -1 +1 +1 -1 -1 +1 +1 +1 -1 +1 +1 -1 +1 ...  +1 -693.0       1 ...
+6 -1 -1 +1 -1 +1 -1 +1 +1 -1 -1 -1 +1 -1 +1 -1 +1 +1 ...  -1 -693.0       1 ...
+7 -1 -1 +1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 ...  -1 -693.0       1 ...
+8 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 -1 -1 ...  +1 -689.0       1 ...
+9 -1 -1 -1 +1 +1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 ...  -1 -685.0       1 ...
+['SPIN', 10 rows, 10 samples, 729 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 30 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 ... 899 energy num_oc. ...
+0 +1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 ...  -1 -872.0       1 ...
+1 +1 -1 +1 +1 -1 -1 +1 -1 +1 +1 -1 -1 +1 +1 -1 -1 +1 ...  -1 -864.0       1 ...
+2 +1 +1 -1 +1 -1 +1 -1 -1 +1 +1 -1 -1 +1 +1 +1 -1 +1 ...  -1 -860.0       1 ...
+3 -1 -1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 -1 +1 ...  -1 -860.0       1 ...
+4 -1 +1 +1 -1 +1 -1 -1 -1 +1 -1 -1 +1 +1 -1 +1 +1 -1 ...  -1 -860.0       1 ...
+7 -1 -1 +1 +1 -1 -1 +1 -1 +1 -1 +1 -1 +1 +1 -1 +1 +1 ...  -1 -856.0       1 ...
+5 -1 -1 +1 -1 -1 -1 +1 +1 -1 +1 -1 -1 -1 +1 -1 -1 +1 ...  -1 -852.0       1 ...
+9 -1 +1 +1 +1 +1 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 +1 ...  +1 -852.0       1 ...
+6 -1 -1 +1 -1 -1 +1 -1 -1 +1 -1 -1 +1 -1 +1 +1 -1 +1 ...  -1 -848.0       1 ...
+8 +1 -1 -1 +1 -1 +1 +1 -1 +1 +1 -1 -1 -1 -1 +1 -1 +1 ...  -1 -844.0       1 ...
+['SPIN', 10 rows, 10 samples, 900 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 33 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1088  energy num_oc. ...
+0 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 +1 -1 -1 +1 ...   +1 -1053.0       1 ...
+1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 -1 +1 ...   +1 -1049.0       1 ...
+2 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 +1 ...   +1 -1041.0       1 ...
+3 -1 -1 +1 -1 -1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 ...   +1 -1041.0       1 ...
+7 -1 +1 +1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 ...   +1 -1041.0       1 ...
+4 -1 -1 +1 -1 -1 +1 +1 -1 +1 -1 +1 +1 -1 -1 -1 +1 ...   -1 -1037.0       1 ...
+5 -1 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 -1 +1 ...   -1 -1037.0       1 ...
+6 -1 +1 +1 -1 +1 -1 -1 +1 -1 -1 -1 +1 +1 +1 +1 -1 ...   -1 -1037.0       1 ...
+9 -1 +1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 +1 -1 ...   +1 -1037.0       1 ...
+8 -1 +1 -1 +1 -1 -1 +1 -1 +1 -1 +1 -1 +1 -1 +1 -1 ...   +1 -1029.0       1 ...
+['SPIN', 10 rows, 10 samples, 1089 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 36 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1295  energy num_oc. ...
+0 +1 -1 +1 +1 -1 +1 -1 +1 -1 +1 +1 +1 +1 -1 +1 +1 ...   -1 -1260.0       1 ...
+4 +1 -1 +1 -1 -1 +1 -1 +1 +1 +1 -1 +1 +1 -1 -1 -1 ...   -1 -1260.0       1 ...
+1 -1 -1 +1 +1 -1 -1 -1 +1 +1 +1 -1 +1 -1 +1 +1 -1 ...   +1 -1256.0       1 ...
+2 -1 +1 -1 -1 -1 +1 -1 +1 +1 +1 -1 +1 +1 -1 -1 -1 ...   +1 -1252.0       1 ...
+3 +1 -1 +1 -1 +1 -1 -1 +1 -1 +1 +1 +1 -1 +1 -1 +1 ...   -1 -1252.0       1 ...
+5 -1 -1 -1 +1 +1 +1 -1 +1 -1 -1 +1 +1 +1 -1 -1 +1 ...   -1 -1248.0       1 ...
+6 -1 +1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 -1 +1 -1 ...   -1 -1240.0       1 ...
+7 -1 +1 -1 +1 -1 -1 +1 -1 +1 +1 +1 +1 +1 -1 +1 -1 ...   +1 -1236.0       1 ...
+8 -1 -1 +1 -1 +1 +1 -1 +1 -1 +1 +1 -1 +1 -1 -1 -1 ...   -1 -1232.0       1 ...
+9 +1 -1 +1 +1 -1 -1 +1 +1 -1 -1 +1 +1 +1 -1 -1 +1 ...   -1 -1224.0       1 ...
+['SPIN', 10 rows, 10 samples, 1296 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 39 -JL 1.0 -solver qpu -numResult 10 )   
+   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 ... 1520  energy num_oc. ...
+0 -1 -1 +1 -1 +1 +1 -1 -1 +1 -1 +1 +1 -1 -1 +1 -1 ...   -1 -1489.0       1 ...
+4 -1 -1 +1 -1 +1 +1 -1 -1 -1 +1 -1 +1 +1 +1 -1 +1 ...   +1 -1489.0       1 ...
+1 +1 +1 -1 -1 +1 +1 -1 -1 +1 -1 -1 +1 -1 -1 -1 +1 ...   +1 -1485.0       1 ...
+2 -1 +1 +1 -1 +1 -1 -1 +1 -1 +1 -1 -1 +1 +1 -1 -1 ...   +1 -1485.0       1 ...
+3 -1 +1 +1 -1 +1 +1 -1 -1 +1 -1 +1 -1 +1 -1 -1 -1 ...   -1 -1485.0       1 ...
+5 -1 +1 -1 -1 +1 +1 -1 -1 +1 +1 -1 +1 +1 -1 -1 +1 ...   +1 -1481.0       1 ...
+6 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 -1 -1 +1 +1 -1 -1 ...   -1 -1477.0       1 ...
+8 +1 -1 +1 +1 -1 +1 -1 -1 +1 -1 -1 -1 +1 -1 +1 -1 ...   -1 -1473.0       1 ...
+7 -1 -1 +1 -1 +1 +1 -1 -1 +1 +1 -1 +1 -1 +1 -1 +1 ...   -1 -1469.0       1 ...
+9 +1 -1 +1 -1 +1 +1 -1 -1 +1 -1 -1 +1 +1 +1 -1 +1 ...   -1 -1465.0       1 ...
+['SPIN', 10 rows, 10 samples, 1521 variables]
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 42 -JL 1.0 -solver qpu -numResult 10 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 45 -JL 1.0 -solver qpu -numResult 10 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 48 -JL 1.0 -solver qpu -numResult 10 )   
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+n Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire       
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 51 -JL 1.0 -solver qpu -numResult 10 )
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire        
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire       
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 54 -JL 1.0 -solver qpu -numResult 10 )
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire        
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire        
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire       
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 57 -JL 1.0 -solver qpu -numResult 10 )
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire        
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire       
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 10teTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 10  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 10  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 239, in sample
+    raise ValueError("no embedding found")
+ValueError: no embedding found
+
+E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 10E:\project\ElectroPhysics-project\dwave\triangular>(python .\main.py runIsing -L 60 -JL 1.0 -solver qpu -numResult 10 )
+Traceback (most recent call last):
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 87, in <module>
+    fire.Fire(Run)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\fire\core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\main.py", line 32, in runIsing
+    sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+  File "E:\project\ElectroPhysics-project\dwave\triangular\src\solvers.py", line 15, in doQPUSolver
+    sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dimod\core\sampler.py", line 266, in sample_ising
+    return self.sample(bqm, **parameters)
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\dwave\system\composites\embedding.py", line 235, in sample
+    embedding = self.find_embedding(source_edgelist, target_edgelist,
+  File "E:\project\ElectroPhysics-project\dwave\dwave-venv\lib\site-packages\minorminer\minorminer.py", line 41, in find_embedding
+    return __find_embedding(S, T,
+  File "minorminer\\_minorminer.pyx", line 293, in minorminer._minorminer.find_embedding
+KeyboardInterrupt: embedding cancelled by keyboard interrupt
+^C要終止批次工作嗎 (Y/N)? y
+PS E:\project\ElectroPhysics-project\dwave\triangular> 
