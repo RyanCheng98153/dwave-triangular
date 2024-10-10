@@ -1,6 +1,6 @@
 from src.solvers import Solver
 from src.ising import Ising
-from src.utils import getfileData, uniquifyFilename, formatSampleset
+from src.utils import getfileData, uniquifyFile, displayAllSampleset
 import sys, os
 import fire
 
@@ -36,36 +36,55 @@ class Run(object):
             raise ValueError( "Wanted a type of solver: not NO_SOLVER" )
         
         # beautiful format sampleset
-        filestr = "=== Result ===\n" 
-        formatted_sampleset = formatSampleset(sampleset, L*L)
-        filestr += str(formatted_sampleset) + '\n'
+        formatted_sampleset = displayAllSampleset(sampleset, L*L)
+        filestr = str(formatted_sampleset) + '\n'
         
         # choose the target directory and file 
-        targetpath = f"./results/triangular/{solver.upper()}/"
-        filename = f"tri_L{L}_JL_{JL}_{solver.upper()}_sam{numResult}_.txt"
-        targetfile = uniquifyFilename(targetpath + filename)
+        dir = f"./results/triangular/{solver.upper()}/"
+        output_filename = f"tri_L{L}_JL_{JL}_{solver.upper()}_sam{numResult}_.txt"
+        targetfile = uniquifyFile(dir + output_filename)
         
-        if not os.path.exists(targetpath):
-            os.makedirs(targetpath)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
         with open(targetfile, "w") as f:
             f.writelines(filestr)
         
         return sampleset
     
     @staticmethod
-    def runSpaceFile(filename:str, solver: str = "None"):
+    def runSpaceFile(
+        filename:str, 
+        solver: str = "None",
+        numResult: int = 1
+        
+    ):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
         if solver == "exact":
             sampleset = Solver.doExactSolver(H, J)
         elif solver == "qpu":
-            sampleset = Solver.doQPUSolver(H, J, "test", 1)
+            sampleset = Solver.doQPUSolver(H, J, filename, numResult)
         else:
             sampleset = "No Solver"
         
-        # print("=== Result ===")
-        # print(sampleset)
-        # Solver.printIsing(H, J, printMode=True)
+        # beautiful format sampleset
+        num_vars = len(sampleset.record[0][0])
+        
+        formatted_sampleset = displayAllSampleset(sampleset, num_vars)
+        filestr = str(formatted_sampleset) + '\n'
+        
+        # choose the target directory and file 
+        dir = f"./results/custom/{solver.upper()}/"
+        
+        filename = filename.split("/")[-1].split('\\')[-1]
+        output_filename = f"{filename}_{solver.upper()}_sam{numResult}_.txt"
+        targetfile = uniquifyFile(dir + output_filename)
+        
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+        with open(targetfile, "w") as f:
+            f.writelines(filestr)
+        
         return sampleset
         
 def test(status:bool):
