@@ -11,7 +11,7 @@ def getAPItoken(filepath:str):
     with open(filepath, 'r', encoding='utf-8') as F:
         return F.readlines()
 
-def uniquifyFilename(path:str)->str:
+def uniquifyFile(path:str)->str:
         filename, extension = os.path.splitext(path)
         counter = 1
         while os.path.exists(path):
@@ -19,14 +19,17 @@ def uniquifyFilename(path:str)->str:
             path = filename + "(" + str(counter) + ")" + extension
             counter += 1
         if counter != 1:
+            print(f"{originPath} has existed. --> {path} is now created.")
             pass
-            # print(f"{originPath} has existed. --> {path} is now created.")
         return path
     
-def formatSampleset(sampleset, var_num:int):
-    w = (log(var_num) // log(10) +2)
-    formatwidth = int(w * var_num + 25)
+def displayAllSampleset(sampleset, num_vars:int):
+    # make sampleset can show all results
+    w = (log(num_vars) // log(10) +2)
+    formatwidth = int(w * num_vars + 25)
     
+    if formatwidth < 60:
+        formatwidth = 60
     formatted_sampleset = Formatter(width = formatwidth).format(sampleset)
     return formatted_sampleset
 
