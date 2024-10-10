@@ -24,17 +24,49 @@ Hope you have a great day :blush:
 `pip install -r ./requirements.txt`
 
 ## usage
-- Execution with triangular ising model: 
-    length: `L*L`
-    bond strength: `-JL`
-    solver: `solverType` 
-    `python .\main.py runIsing -L 3 -JL 1.0 -solverType EXACT_SOLVER`
+ - RunIsing: Execution with triangular ising model:
+    ```sh
+    python main.py runIsing -L [L] -JL [JL] -solver [solver] -numResult [nums]
+    ``` 
+    or 
+    ```sh
+    python main.py runIsing -L [L] -JL [JL] -s [solver] -n [nums]
+    ```
+    - format:   
+        `-L`: length of the lattice
+        `-JL`: bond strength connected between each nodes
+        `-solver`: solver of D-wave: 
+        - `exact` for exactSolver, 
+        - `qpu`for quantum Solver
 
-- Execution with custom couplings
-    ```python ./main [-file path]``` 
-    ex: ```python ./main ./example.txt```
+        `-numResult`: number of D-wave output results
+    
+    - usage examples:
+        `python main.py runIsing -L 3 -JL 1.0 -solver exact -numResult 1` 
+        or 
+        `python main.py runIsing -L 3 -JL 1.0 -s exact -n 1`
+---
 
-## File Format
+ - RunSpaceFile: Execution with custom couplings
+   ```sh
+   python main.py runSpaceFile -filename [filename] -solver [solver] -numResult [num]
+   ``` 
+   or 
+   ```sh
+   python main.py runSpaceFile -f [filename] -s [solver] -n [num]
+   ``` 
+   - format:   
+        `-filename`: input custon by space file 
+        `-solver`: solver of D-wave: 
+        - `exact` for exactSolver, 
+        - `qpu`for quantum Solver
+
+    `-numResult`: number of D-wave output results
+    
+   - usage examples:
+        `python main.py runSpaceFile -f .\example\spaceExample.txt -s exact -n 1` 
+    
+## File Format (runSpacFile)
 - Space Separate File Format
 - using `#` as a comment for the model
 ```
