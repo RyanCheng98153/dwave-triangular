@@ -1,5 +1,5 @@
 import dimod
-from dwave.system import DWaveSampler, EmbeddingComposite
+from dwave.system import DWaveSampler, EmbeddingComposite, LeapHybridSampler
 
 class Solver:
     @staticmethod
@@ -15,6 +15,14 @@ class Solver:
         sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
         
         return sampleset
+    
+    @staticmethod
+    def doHybridSolver(_H, _J, _taskname, _num_samples: int):
+        sampler: LeapHybridSampler = LeapHybridSampler()
+        sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+        
+        return sampleset
+    
     
     @staticmethod
     def printIsing(_H, _J, printMode=True):
