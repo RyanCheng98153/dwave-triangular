@@ -22,6 +22,8 @@ Hope you have a great day :blush:
 
 ## Requirements
 `pip install -r ./requirements.txt`
+or 
+`pip install dwave-ocean-sdk` + `pip install fire`
 
 ## Usage
  - RunIsing: Execution with triangular ising model:
