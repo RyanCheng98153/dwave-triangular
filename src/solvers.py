@@ -17,9 +17,9 @@ class Solver:
         return sampleset
     
     @staticmethod
-    def doHybridSolver(_H, _J, _taskname, _num_samples: int):
+    def doHybridSolver(_H, _J, _taskname):
         sampler: LeapHybridSampler = LeapHybridSampler()
-        sampleset = sampler.sample_ising( _H, _J, label=_taskname, num_reads=_num_samples)
+        sampleset = sampler.sample_ising( _H, _J, label=_taskname)
         
         return sampleset
     

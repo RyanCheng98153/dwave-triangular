@@ -6,9 +6,10 @@ import fire
 
 from enum import Enum
 class PickSolver(Enum):
-    NO_SOLVER:str = "Mone"
+    NO_SOLVER:str = "none"
     EXACT_SOLVER:str = "exact"
     QPU_SOLVER:str = "qpu"
+    HYBRID_SOLVER:str = "hybird"
 
 class Run(object):
     def __init__( self ):
@@ -29,7 +30,11 @@ class Run(object):
             sampleset = Solver.doExactSolver(H, J)
             
         elif (solver == "qpu" or solverType == PickSolver.QPU_SOLVER):
-            sampleset = Solver.doQPUSolver(H, J, f"tri_L_{L}_JL_{JL}", numResult)
+            sampleset = Solver.doQPUSolver(H, J, f"qpu_tri_L_{L}_JL_{JL}_sam{numResult}", numResult)
+        
+        elif (solver == "hybrid" or solverType == PickSolver.HYBRID_SOLVER):
+            """hybrid can only have 1 result"""
+            sampleset = Solver.doHybridSolver(H, J, f"hybrid_tri_L_{L}_JL_{JL}_sam1")
         
         else:
             sampleset = "No Solver"
@@ -60,10 +65,18 @@ class Run(object):
     ):
         file = getfileData( filename )
         H, J = Ising.spacefileConnect(file)
+        
+        filename = filename.split("/")[-1].split('\\')[-1]
         if solver == "exact":
             sampleset = Solver.doExactSolver(H, J)
+        
         elif solver == "qpu":
-            sampleset = Solver.doQPUSolver(H, J, filename, numResult)
+            sampleset = Solver.doQPUSolver(H, J, f"qpu_{filename}_sam{numResult}", numResult)
+        
+        elif (solver == "hybrid"):
+            """hybrid can only have 1 result"""
+            sampleset = Solver.doHybridSolver(H, J, f"hybrid_{filename}_sam1")
+        
         else:
             sampleset = "No Solver"
         
@@ -76,8 +89,8 @@ class Run(object):
         # choose the target directory and file 
         dir = f"./results/custom/{solver.upper()}/"
         
-        filename = filename.split("/")[-1].split('\\')[-1]
-        output_filename = f"{filename}_{solver.upper()}_sam{numResult}_.txt"
+        fname, extension = os.path.splitext(filename)
+        output_filename = f"{fname}_{solver.upper()}_sam{numResult}_.txt"
         targetfile = uniquifyFile(dir + output_filename)
         
         if not os.path.exists(dir):
