@@ -20,10 +20,10 @@ Hope you have a great day :blush:
 4. Update the pip install to the latest version
     `python -m pip install --upgrade pip`
 
-## requirements
+## Requirements
 `pip install -r ./requirements.txt`
 
-## usage
+## Usage
  - RunIsing: Execution with triangular ising model:
     ```sh
     python main.py runIsing -L [L] -JL [JL] -solver [solver] -numResult [nums]
@@ -45,7 +45,6 @@ Hope you have a great day :blush:
         `python main.py runIsing -L 3 -JL 1.0 -solver exact -numResult 1` 
         or 
         `python main.py runIsing -L 3 -JL 1.0 -s exact -n 1`
----
 
  - RunSpaceFile: Execution with custom couplings
    ```sh
