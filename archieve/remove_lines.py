@@ -1,7 +1,5 @@
-import sys
+import sys, os
 
-# import required module
-import os
 # assign directory
 directory = sys.argv[1]
 file_list = []
