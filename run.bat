@@ -35,7 +35,6 @@ for %%n in (%nums%) do (
   )
 )
 
-:SKIP
 
 :: kagome qpu
 set vars=6 12 18 24 30 36 42
@@ -57,5 +56,17 @@ for %%n in (%nums%) do (
   )
 )
 
+
+:SKIP
+
+:: kagome hybrid
+set vars=48 54 60
+set nums=1
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n %%n
+  )
+)
 
 pause
