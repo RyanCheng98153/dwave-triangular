@@ -25,7 +25,7 @@ def uniquifyFile(path:str)->str:
     
 def displayAllSampleset(sampleset, num_vars:int):
     # make sampleset can show all results
-    w = (log(num_vars) // log(10) +2)
+    w = (log(num_vars) // log(10) +5)
     formatwidth = int(w * num_vars + 25)
     
     if formatwidth < 60:
