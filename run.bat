@@ -25,20 +25,23 @@ for %%n in (%nums%) do (
 )
 
 
-:: mapleleaf hybrid
-set vars=7 14 21 28 35 42
+:: kagome hybrid
+set vars=66 72 78 84 90 96 102 108 114 120
 set nums=1
 
 for %%n in (%nums%) do (
   for %%i in (%vars%) do (
-    python .\main.py runSpaceFile -f .\LatticeFile\MapleLeaf\mapleleaf_L_%%i_%%i.txt -s hybrid -n %%n
+    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n %%n
   )
 )
 
+set vars=48 54 60
+
+:SKIP
 
 :: kagome qpu
-set vars=6 12 18 24 30 36 42
-set nums=3 1000
+set vars=60
+set nums=3
 
 for %%n in (%nums%) do (
   for %%i in (%vars%) do (
@@ -46,26 +49,14 @@ for %%n in (%nums%) do (
   )
 )
 
-:: kagome hybrid
-set vars=6 12 18 24 30 36 42
-set nums=1
+
+:: kagome qpu
+set vars=66 72 78 84 90 96 102 108 114 120
+set nums=3
 
 for %%n in (%nums%) do (
   for %%i in (%vars%) do (
-    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n %%n
-  )
-)
-
-
-:SKIP
-
-:: kagome hybrid
-set vars=48 54 60
-set nums=1
-
-for %%n in (%nums%) do (
-  for %%i in (%vars%) do (
-    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n %%n
+    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s qpu -n %%n
   )
 )
 
