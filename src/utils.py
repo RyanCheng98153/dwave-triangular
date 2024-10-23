@@ -34,7 +34,8 @@ def uniquifyFile(path:str)->str:
             print(f"{originPath} has existed. --> {path} is now created.")
             pass
         return path
-    
+
+# @timer_func
 def displayAllSampleset(sampleset, num_vars:int):
     # make sampleset can show all results
     w = (log(num_vars) // log(10) +5)

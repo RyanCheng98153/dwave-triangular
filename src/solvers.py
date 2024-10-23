@@ -1,14 +1,17 @@
 import dimod
 from dwave.system import DWaveSampler, EmbeddingComposite, LeapHybridSampler
+from src.utils import timer_func
 
 class Solver:
+    # @timer_func
     @staticmethod
     def doExactSolver(_H: dict, _J: dict):
         sampler: dimod.ExactSolver = dimod.ExactSolver()
         sampleset = sampler.sample_ising(_H, _J)
         
         return sampleset
-        
+    
+    # @timer_func
     @staticmethod
     def doQPUSolver(_H, _J, _taskname, _num_samples: int):
         sampler: EmbeddingComposite = EmbeddingComposite(DWaveSampler())
@@ -16,6 +19,7 @@ class Solver:
         
         return sampleset
     
+    # @timer_func
     @staticmethod
     def doHybridSolver(_H, _J, _taskname):
         sampler: LeapHybridSampler = LeapHybridSampler()
