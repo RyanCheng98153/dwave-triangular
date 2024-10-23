@@ -35,9 +35,7 @@ for %%n in (%nums%) do (
   )
 )
 
-set vars=48 54 60
-
-:SKIP
+:: not test1 end
 
 :: kagome qpu
 set vars=60
@@ -57,6 +55,20 @@ set nums=3
 for %%n in (%nums%) do (
   for %%i in (%vars%) do (
     python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s qpu -n %%n
+  )
+)
+
+:: not test1 end 
+:SKIP
+
+:: mapleleaf hybrid
+set vars=49 
+set nums=1
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    echo mapleleaf
+    python .\main.py runSpaceFile -f .\LatticeFile\MapleLeaf\mapleleaf_L_%%i_%%i.txt -s hybrid -n %%n
   )
 )
 
