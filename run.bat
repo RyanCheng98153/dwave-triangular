@@ -62,7 +62,7 @@ for %%n in (%nums%) do (
 :SKIP
 
 :: mapleleaf hybrid
-set vars=49 
+set vars=49 56 63 70 77 84 91 98 105 112 119 126 133 140
 set nums=1
 
 for %%n in (%nums%) do (
