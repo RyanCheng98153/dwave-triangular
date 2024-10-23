@@ -1,4 +1,4 @@
-from src.utils import toIndex, getRight, getBottom, getBottomRight
+from src.utils import toIndex, getRight, getBottom, getBottomRight, timer_func
 
 class Ising:
     @staticmethod
@@ -20,6 +20,7 @@ class Ising:
         
         return H, J
     
+    # @timer_func
     @staticmethod
     def spacefileConnect(file:list[str]) -> tuple[dict, dict]:
         H = dict()
