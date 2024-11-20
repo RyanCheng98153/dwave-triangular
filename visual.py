@@ -1,5 +1,7 @@
 import argparse
 from enum import Enum
+from visualResult.kagome import KagomeGraph, Visualize, Spin
+from math import sqrt
 
 class Model(Enum):
     Triangular = "triangular"
@@ -9,17 +11,6 @@ class Model(Enum):
     def __str__(self):
         return self.value
 
-class Kagome:
-    def __init__(self,
-                 ):
-        pass
-
-    def draw(self,
-        _ids: list[int],
-        _vars: list[list[int]]
-    ):
-        pass
-    
 def main(_model: Model):
     
     with open(args.filename, "r") as f:
@@ -49,9 +40,26 @@ def main(_model: Model):
     i = 0
     
     if _model == Model.Kagome:
-        print( results[i] )
-        graph = Kagome(ids, results[qubos])
+        qubos = results[i]["qubos"]
         
+        L:int = int(sqrt( len(qubos) * 4 / 3 ))
+        W:int = L
+        
+        graph = KagomeGraph(L, W, 0)
+        graph.makeGraph()
+        graph.bondGraph(1.0, 1.0, 1.0)
+        
+        clean_node = filter(lambda node: node!=None and node.clean_id in ids, graph.nodes)
+        
+        for node, qubo in zip(clean_node, qubos):
+            if qubo == 1:
+                node.spin = Spin.UP
+            if qubo == -1:
+                node.spin = Spin.DOWN
+            # print(f"{node.clean_id}: {node.id}")
+        
+        Visualize.visualize(graph, labelHexagon=False, showStrength=False)
+
     
 if __name__ == "__main__":    
     parser = argparse.ArgumentParser()
