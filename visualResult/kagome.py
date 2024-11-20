@@ -41,6 +41,9 @@ class Node:
         self.bottomType        :BondType = None
         self.bottomRightType   :BondType = None
 
+    def __repr__(self):
+        return str(self.id)
+        
 class NodeHelper:
     def __init__(self, _L:int, _W:int):
         self.L:int = _L
@@ -122,6 +125,13 @@ class KagomeGraph:
                     self.nodes[srcId].NodeType = NodeType.Blue
                     self.nodes[srcId].right = None
                     continue
+                
+        index = 0
+        for srcNode in self.nodes:
+            if srcNode != None:
+                srcNode.clean_id = index
+                index += 1
+        
                     
     def bondGraph(self, _JTriangle:float, _JHexagon: float, _JDimer: float):
         for i in range(0, self.L):

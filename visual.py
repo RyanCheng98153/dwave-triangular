@@ -49,14 +49,17 @@ def main(_model: Model):
         graph.makeGraph()
         graph.bondGraph(1.0, 1.0, 1.0)
         
-        clean_node = filter(lambda node: node!=None and node.clean_id in ids, graph.nodes)
         
-        for node, qubo in zip(clean_node, qubos):
+        for node in graph.nodes:
+            if node == None:
+                continue
+            
+            qubo = qubos[node.clean_id]
+            
             if qubo == 1:
                 node.spin = Spin.UP
             if qubo == -1:
                 node.spin = Spin.DOWN
-            # print(f"{node.clean_id}: {node.id}")
         
         Visualize.visualize(graph, labelHexagon=False, showStrength=False)
 
