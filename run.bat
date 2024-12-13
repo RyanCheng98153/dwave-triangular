@@ -75,7 +75,7 @@ for %%n in (%nums%) do (
 :SKIP
 
 :: triangular hybrid
-set vars=42 45 48 51 54 57 60 66 72 78 84 90 96 102 108 114 120 123 126 129 132 135 138 141 144 147 150
+set vars=138 141 144 147 150
 set nums=1
 
 for %%n in (%nums%) do (
