@@ -59,7 +59,7 @@ for %%n in (%nums%) do (
 )
 
 :: not test1 end 
-:SKIP
+
 
 :: mapleleaf hybrid
 set vars=49 56 63 70 77 84 91 98 105 112 119 126 133 140
@@ -72,4 +72,14 @@ for %%n in (%nums%) do (
   )
 )
 
-pause
+:SKIP
+
+:: triangular hybrid
+set vars=42 45 48 51 54 57 60 66 72 78 84 90 96 102 108 114 120 123 126 129 132 135 138 141 144 147 150
+set nums=1
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    python .\main.py runIsing -L %%i -JL 1.0 -s hybrid -n %%n
+  )
+)
