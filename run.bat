@@ -72,8 +72,6 @@ for %%n in (%nums%) do (
   )
 )
 
-:SKIP
-
 :: triangular hybrid
 set vars=138 141 144 147 150
 set nums=1
@@ -81,5 +79,51 @@ set nums=1
 for %%n in (%nums%) do (
   for %%i in (%vars%) do (
     python .\main.py runIsing -L %%i -JL 1.0 -s hybrid -n %%n
+  )
+)
+
+:SKIP
+
+:: mapleleaf hybrid 77 for 10 times
+set vars=77
+set nums=1 2 3 4 5 6 7
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    echo mapleleaf
+    python .\main.py runSpaceFile -f .\LatticeFile\MapleLeaf\mapleleaf_L_%%i_%%i.txt -s hybrid -n 1
+  )
+)
+
+:: kagome hybrid 90 for 10 times
+set vars=90
+set nums=1 2 3 4 5 6 7 8 9 10
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n 1
+  )
+)
+
+
+:: mapleleaf hybrid 70 for 20 times
+set vars=70
+set nums=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    echo mapleleaf
+    python .\main.py runSpaceFile -f .\LatticeFile\MapleLeaf\mapleleaf_L_%%i_%%i.txt -s hybrid -n 1
+  )
+)
+
+
+:: kagome hybrid 84 for 20 times
+set vars=84
+set nums=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+for %%n in (%nums%) do (
+  for %%i in (%vars%) do (
+    python .\main.py runSpaceFile -f .\LatticeFile\Kagome\kagome_L_%%i_%%i.txt -s hybrid -n 1
   )
 )
